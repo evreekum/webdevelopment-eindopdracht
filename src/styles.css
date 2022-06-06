@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+body {
+    box-sizing: border-box;
+    font-family: "Poppins-Bold", sans-serif;
+    background-color: #f9f9eb;
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-basis: 1400px;
+}
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+
+h3 {
+    border: 1px solid green;
+    font-family: "Austein", sans-serif;
+    font-size: 35px;
+    color: #004466;
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+/* --------------- 3.1 Reusables ----------------------- */
+
+/* --------------- 3.2 Other --------------------------- */
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+header {
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*height: 80px;*/
+    width: 100%;
+
+}
+
+nav {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-basis: 1400px;
+}
+
+nav h3 {
+
+}
+
+.header__title {
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: flex-start;*/
+    /*align-self: flex-start;*/
+}
+
+ul {
+    border: 1px solid green;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 300px;
+
+
+}
+
+.header__navigation-list {
+
+}
+
+/* --------------- 4.2 Introduction ------------------- */
+
+/* --------------- 4.3 Main --------------------------- */
+.main__inner-title-container img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 1400px;
+    width: 100%;
+
+}
+/* --------------- 4.4 Footer ------------------------- */
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+
+
+
