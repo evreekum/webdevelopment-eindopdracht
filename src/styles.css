@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 /*////////////////////////
     Table of Contents
     1. Global Styles
@@ -14,99 +16,241 @@
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
-body {
+* {
     box-sizing: border-box;
-    font-family: "Poppins-Bold", sans-serif;
-    background-color: #f9f9eb;
-    color: black;
     margin: 0;
     padding: 0;
 }
 
-.outer-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-basis: 1400px;
+:root {
+    --light-bg-color: #EEEEEE;
+    --dark-bg-color: #283E53;
+    --button-color: #70B6BE;
+    --main-font-color: #3E3E3E;
 }
 
 /* ------------------------------- 2. Typography ----------------------------------- */
+body {
+    font-family: "poppins", sans-serif;
+    background-color: #EEEEEE;
+    color: var(--main-font-color);
+}
 
+h1,
+.main__subtitle {
+    border: 1px solid blue;
+    font-size: 45px;
+    color: var(--light-bg-color);
+}
 
-h3 {
-    border: 1px solid green;
+h2 {
+    border: 1px solid blue;
     font-family: "Austein", sans-serif;
-    font-size: 35px;
-    color: #004466;
+    font-size: 30px;
+    font-weight: lighter;
+    color: var(--dark-bg-color);
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+.navigation-list li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--main-font-color);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+select {
+    text-transform: capitalize;
 }
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
-/* --------------- 3.1 Reusables ----------------------- */
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.inner-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 1000px;
+}
+
+.nav-wrapper {
+    justify-content: space-between;
+    height: 60px;
+
+}
+
+.navigation-list {
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 35px;
+    margin-right: 60px;
+
+}
+
+.header__outer-container {
+    background-image: url("./assets/images/hero-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    /*flex-basis: 700px;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*align-items: flex-start;*/
+}
+
+.header__title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+/*.header-card {
+    border: 2px solid orange;
+    position: relative;
+    display: inline-block;
+}
+.header-text {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.header-text::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: inherit;
+}*/
+
+/*.hero__img-wrapper {*/
+/*    !*display: block;*!*/
+/*    max-width: 100%;*/
+/*    height: auto;*/
+/*}*/
+
+.header__recipes-wrapper {
+    justify-content: space-evenly;
+    top: -20px;
+}
+
+/*WAAROM DOET IE NIET HETZELFDE ALS MN NAVIGATIE LIJST?*/
+
+/*#header__random-recipes-list li {
+    display: inline;
+
+}
+
+.random-recipe-item {
+    border: 1px solid blue;
+    height: 100px;
+    width: 100px;
+}*/
+
+
+
+.main__search-wrapper {
+    justify-content: space-evenly;
+}
+
+.main__recipes-wrapper {
+
+}
+
+
+
+
+
+
+/*--------------------------------- 3.1 Temporary Border ----------------------------*/
+.outer-container {
+    border: 1px solid red;
+
+}
+
+.inner-container {
+    border: 1px solid green;
+
+}
+
+
+
+/* --------------- 3.2 Reusables ----------------------- */
+
+button {
+    text-transform: capitalize;
+}
+
+button::after {
+    content: "→";
+    display: inline-block;
+    padding-left: 7px;
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
 /* ------------------------------- 4. Areas ---------------------------------------- */
+/*---------------- 4.1 Navigation --------------------- */
 
-/* --------------- 4.1 Header ------------------------- */
-header {
-    /*position: fixed;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*height: 80px;*/
-    width: 100%;
+
+.navigation-list li a {
 
 }
 
-nav {
-    border: 1px solid red;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    flex-basis: 1400px;
-}
-
-nav h3 {
+.nav__title {
+    margin-left: 60px;
 
 }
 
-.header__title {
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*justify-content: flex-start;*/
-    /*align-self: flex-start;*/
-}
-
-ul {
-    border: 1px solid green;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-basis: 300px;
 
 
-}
+/* --------------- 4.2 Header ------------------------- */
 
-.header__navigation-list {
 
-}
+
+
 
 /* --------------- 4.2 Introduction ------------------- */
 
 /* --------------- 4.3 Main --------------------------- */
-.main__inner-title-container img {
+/*.hero__img-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-basis: 1400px;
-    width: 100%;
+    flex-basis: 100%;
+    !*width: 100%;*!
+}*/
 
-}
+
 /* --------------- 4.4 Footer ------------------------- */
 
+/*.footer-list {
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 100px;
+    padding-left: 100px;
+}*/
+
+
 /* ------------------------------- 5. Media Queries -------------------------------- */
+
 
 
 

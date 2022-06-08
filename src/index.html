@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
@@ -9,46 +9,126 @@
 
 <body>
 
-<header class="outer-container">
-    <nav class="nav-inner-container">
-        <h3 class="header__title">The Clueless Cook</h3>
-        <ul class="header__navigation-list">
-<!--            <li class="main__title">The Clueless Cook</li>-->
-            <li>Home</li>
-            <li>About</li>
-            <li>Calculator</li>
+<section class="navigation outer-container">
+    <nav class="nav-wrapper inner-container">
+        <h2 class="nav__title">The Clueless Cook</h2>
+        <ul class="navigation-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about-footer">About</a></li>
+            <li><a href="#">Calculator</a></li>
         </ul>
     </nav>
+</section>
 
+
+<header class="header__outer-container outer-container">
+
+    <section class="header__title-wrapper inner-container">
+        <div class="header-card">
+            <div class="header-text">
+                <h1>Delicious Recipes.</h1>
+                <p class="main__subtitle">Daily Updated.</p>
+
+                <button type="button" class="header__button">find recipes</button>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <section class="header__recipes-wrapper inner-container">
+        <ul id="header__random-recipes-list">
+            <li class="random-recipe-item"><a href="#">Random Recipe 1</a></li>
+            <li class="random-recipe-item"><a href="#">Random Recipe 2</a></li>
+            <li class="random-recipe-item"><a href="#">Random Recipe 3</a></li>
+        </ul>
+    </section>
 
 </header>
 
 
-
 <main class="outer-container">
-    <section class="main__inner-title-container">
-        <h1>Delicious Recipes</h1>
-        <p class="main-subtitle">Daily Updated.</p>
-        <img class="" src="./assets/images/hero-image.jpg" alt="Cooking Image">
-        <button type="button" class="find-recipes"></button>
+
+    <section class="main__search-wrapper inner-container">
+
+        <form action="">
+            <label for="search-field">
+                <input type="search" id="search-field" placeholder="Recipe Search"/>
+            </label>
+
+            <label for="meal-type">
+                <select id="meal-type">
+                    <option disabled selected>Meal type</option>
+                    <option>Breakfast</option>
+                    <option>Lunch</option>
+                    <option>Diner</option>
+                    <option>Dessert</option>
+                </select>
+            </label>
+
+            <label for="cuisine">
+                <select id="cuisine">
+                    <option disabled selected>cuisine</option>
+                    <option>indian</option>
+                    <option>italian</option>
+                    <option>dutch</option>
+                    <option>chinese</option>
+                    <option>indonesian</option>
+                </select>
+            </label>
+
+            <label for="diet">
+                <select id="diet">
+                    <option disabled selected>diet</option>
+                    <option>gluten free</option>
+                    <option>low carbs</option>
+                    <option>low sodium</option>
+                    <option>lactose free</option>
+                    <option>low fat</option>
+                </select>
+            </label>
+
+            <label for="time">
+                <select id="time">
+                    <option disabled selected>time</option>
+                    <option>Retail</option>
+                    <option>Retail</option>
+                    <option>Retail</option>
+                    <option>Retail</option>
+                    <option>Retail</option>
+                </select>
+            </label>
+
+            <button type="button" class="main__button">search</button>
+        </form>
     </section>
 
-
-    <section class="main__inner-search-container">
-
+    <section class="main__recipes-wrapper inner-container">
+        <ul id="main__recipes-list">
+            <li>Recipe 1</li>
+            <li>Recipe 2</li>
+            <li>Recipe 3</li>
+            <li>Recipe 4</li>
+            <li>Recipe 5</li>
+            <li>Recipe 6</li>
+        </ul>
     </section>
 
-
-    <section class="main__inner-recipes-container">
-
-    </section>
 </main>
 
 
 <footer class="outer-container">
-<section>
 
-</section>
+    <section class="footer__wrapper inner-container">
+        <ul class="footer-list">
+            <li>Information</li>
+            <li id="about-footer">About</li>
+            <li>Contact</li>
+            <li>Social</li>
+        </ul>
+    </section>
 
 </footer>
 
