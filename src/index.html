@@ -7,24 +7,24 @@
     <title>The Clueless Cook - Home</title>
 </head>
 
-<body>
-
-<section class="navigation outer-container">
-    <nav class="nav-wrapper inner-container">
-        <h2 class="nav__title">The Clueless Cook</h2>
-        <ul class="navigation-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#about-footer">About</a></li>
-            <li><a href="#">Calculator</a></li>
-        </ul>
-    </nav>
-</section>
+<body class="body__outer-container">
 
 
-<header class="header__outer-container outer-container">
+<header class="outer-container">
 
-    <section class="header__title-wrapper inner-container">
-        <div class="header-card">
+    <div class="navigation__outer-container">
+        <nav class="nav-wrapper inner-container">
+            <h2 class="nav__title">The Clueless Cook</h2>
+            <ul class="navigation-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about-footer">About</a></li>
+                <li><a href="#">Calculator</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header__outer-container">
+        <div class="header__title-wrapper inner-container">
             <div class="header-text">
                 <h1>Delicious Recipes.</h1>
                 <p class="main__subtitle">Daily Updated.</p>
@@ -33,27 +33,24 @@
             </div>
 
         </div>
-    </section>
+    </div>
 
-
-
-
-    <section class="header__recipes-wrapper inner-container">
-        <ul id="header__random-recipes-list">
+    <div class="header__recipes-wrapper inner-container">
+        <ul class="header__random-recipe-card" id="header__random-recipes-list">
             <li class="random-recipe-item"><a href="#">Random Recipe 1</a></li>
             <li class="random-recipe-item"><a href="#">Random Recipe 2</a></li>
             <li class="random-recipe-item"><a href="#">Random Recipe 3</a></li>
         </ul>
-    </section>
+    </div>
 
 </header>
 
 
 <main class="outer-container">
 
-    <section class="main__search-wrapper inner-container">
+    <div class="main__search-wrapper inner-container">
 
-        <form action="">
+        <form class="search__form" action="">
             <label for="search-field">
                 <input type="search" id="search-field" placeholder="Recipe Search"/>
             </label>
@@ -103,9 +100,9 @@
 
             <button type="button" class="main__button">search</button>
         </form>
-    </section>
+    </div>
 
-    <section class="main__recipes-wrapper inner-container">
+    <div class="main__recipes-wrapper inner-container">
         <ul id="main__recipes-list">
             <li>Recipe 1</li>
             <li>Recipe 2</li>
@@ -114,21 +111,58 @@
             <li>Recipe 5</li>
             <li>Recipe 6</li>
         </ul>
-    </section>
+    </div>
 
 </main>
 
 
-<footer class="outer-container">
+<footer class="footer__outer-container outer-container">
 
-    <section class="footer__wrapper inner-container">
+    <div class="footer__wrapper inner-container">
         <ul class="footer-list">
-            <li>Information</li>
-            <li id="about-footer">About</li>
-            <li>Contact</li>
-            <li>Social</li>
+            <li>
+                <h4>Information</h4>
+                <p>Nullam a enim</p>
+                <p>Quisque cursus</p>
+                <p>Cras egestas</p>
+                <p>Nunc vitae</p>
+            </li>
+            <li id="about-footer">
+                <h4>About</h4>
+                <p>Quisque cursus</p>
+                <p>Cras egestas</p>
+                <p>Nunc vitae</p>
+            </li>
+            <li>
+                <h4>Contact</h4>
+                <p>Cras egestas</p>
+                <p>Nunc vitae</p>
+                <p>Nullam a enim</p>
+            </li>
+
+            <li class="footer__social-wrapper">
+                <h4>Social</h4>
+                <div class="footer__icon-card">
+                    <div class="footer__circle">
+                        <span class="footer__social-icon"><img src="assets/icons/facebook.png"
+                                                               alt="Facebook Icon"></span>
+                    </div>
+                    <div class="footer__circle">
+                        <span class="footer__social-icon"><img src="assets/icons/instagram.png"
+                                                               alt="Instagram Icon"></span>
+                    </div>
+                    <div class="footer__circle">
+                        <span class="footer__social-icon"><img src="assets/icons/linkedin.png"
+                                                               alt="LinkedIn Icon"></span>
+                    </div>
+                    <div class="footer__circle">
+                        <span class="footer__social-icon"><img src="assets/icons/twitter.png" alt="Twitter Icon"></span>
+                    </div>
+                </div>
+
+            </li>
         </ul>
-    </section>
+    </div>
 
 </footer>
 
