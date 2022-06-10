@@ -14,11 +14,11 @@
 
     <div class="navigation__outer-container">
         <nav class="nav-wrapper inner-container">
-            <h2 class="nav__title">The Clueless Cook</h2>
+            <h2>The Clueless Cook</h2>
             <ul class="navigation-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#about-footer">About</a></li>
-                <li><a href="#">Calculator</a></li>
+                <li><a href="index.html">home</a></li>
+                <li><a href="#about-footer">about</a></li>
+                <li><a href="#">calculator</a></li>
             </ul>
         </nav>
     </div>
@@ -29,7 +29,7 @@
                 <h1>Delicious Recipes.</h1>
                 <p class="main__subtitle">Daily Updated.</p>
 
-                <button type="button" class="header__button">find recipes</button>
+                <button type="button" class="header__button"><a href="#search-field">find recipes</a></button>
             </div>
 
         </div>
@@ -49,24 +49,25 @@
 <main class="outer-container">
 
     <div class="main__search-wrapper inner-container">
-
-        <form class="search__form" action="">
+<!--temporary DIV this is a FORM!-->
+        <div class="search__form">
             <label for="search-field">
-                <input type="search" id="search-field" placeholder="Recipe Search"/>
+                <input type="search" name="search-field" id="search-field" placeholder="Recipe Search"/>
             </label>
 
             <label for="meal-type">
-                <select id="meal-type">
+                <select name="meal-type" id="meal-type">
                     <option disabled selected>Meal type</option>
-                    <option>Breakfast</option>
-                    <option>Lunch</option>
-                    <option>Diner</option>
-                    <option>Dessert</option>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="brunch">Brunch</option>
+                    <option value="lunch/dinner">Lunch/Dinner</option>
+                    <option value="snack">Snack</option>
+                    <option value="teatime">Teatime</option>
                 </select>
             </label>
 
             <label for="cuisine">
-                <select id="cuisine">
+                <select name="cuisine" id="cuisine">
                     <option disabled selected>cuisine</option>
                     <option>indian</option>
                     <option>italian</option>
@@ -77,18 +78,19 @@
             </label>
 
             <label for="diet">
-                <select id="diet">
+                <select name="diet" id="diet">
                     <option disabled selected>diet</option>
-                    <option>gluten free</option>
-                    <option>low carbs</option>
-                    <option>low sodium</option>
-                    <option>lactose free</option>
-                    <option>low fat</option>
+                    <option value="balanced">balanced</option>
+                    <option value="high-fiber">high-fiber</option>
+                    <option value="high-protein">high-protein</option>
+                    <option value="low-carb">low-carb</option>
+                    <option value="low-fat">low-fat</option>
+                    <option value="low-sodium">low-sodium</option>
                 </select>
             </label>
 
             <label for="time">
-                <select id="time">
+                <select name="time" id="time">
                     <option disabled selected>time</option>
                     <option>Retail</option>
                     <option>Retail</option>
@@ -98,20 +100,40 @@
                 </select>
             </label>
 
-            <button type="button" class="main__button">search</button>
-        </form>
+            <button type="submit" id="main__search-button">search</button>
+        </div>
     </div>
 
-    <div class="main__recipes-wrapper inner-container">
-        <ul id="main__recipes-list">
-            <li>Recipe 1</li>
-            <li>Recipe 2</li>
-            <li>Recipe 3</li>
-            <li>Recipe 4</li>
-            <li>Recipe 5</li>
-            <li>Recipe 6</li>
+<div class="inner-container">
+    <ul id="main__recipes-results-list"></ul>
+</div>
+
+
+ <!--   <div class="main__recipes-wrapper inner-container">
+        <ul id="main__recipes-results-list">
+            <li class="recipe">Recipe 1</li>
+            <li class="recipe">Recipe 2</li>
+            <li class="recipe">Recipe 3</li>
+            <li class="recipe">Recipe 4</li>
+            <li class="recipe">Recipe 5</li>
+            <li class="recipe">Recipe 6</li>
+            <li class="recipe">Recipe 6</li>
+            <li class="recipe">Recipe 6</li>
+            <li class="recipe">Recipe 6</li>
+            <li class="recipe">Recipe 6</li>
+            <li class="recipe">Recipe 6</li>
+            <li class="recipe">Recipe 6</li>
+            <li class="recipe">Recipe 6</li>
+            <li class="recipe">Recipe 6</li>
+            <li class="recipe">Recipe 6</li>
+            <li class="recipe">Recipe 6</li>
+            <li class="recipe">Recipe 6</li>
+            <li class="recipe">Recipe 6</li>
+            <li class="recipe">Recipe 6</li>
+            <li class="recipe">Recipe 6</li>
+            <li class="recipe">Recipe 6</li>
         </ul>
-    </div>
+    </div>-->
 
 </main>
 
@@ -121,20 +143,20 @@
     <div class="footer__wrapper inner-container">
         <ul class="footer-list">
             <li>
-                <h4>Information</h4>
+                <h4>information</h4>
                 <p>Nullam a enim</p>
                 <p>Quisque cursus</p>
                 <p>Cras egestas</p>
                 <p>Nunc vitae</p>
             </li>
             <li id="about-footer">
-                <h4>About</h4>
+                <h4>about</h4>
                 <p>Quisque cursus</p>
                 <p>Cras egestas</p>
                 <p>Nunc vitae</p>
             </li>
             <li>
-                <h4>Contact</h4>
+                <h4>contact</h4>
                 <p>Cras egestas</p>
                 <p>Nunc vitae</p>
                 <p>Nullam a enim</p>
@@ -143,21 +165,30 @@
             <li class="footer__social-wrapper">
                 <h4>Social</h4>
                 <div class="footer__icon-card">
-                    <div class="footer__circle">
-                        <span class="footer__social-icon"><img src="assets/icons/facebook.png"
-                                                               alt="Facebook Icon"></span>
-                    </div>
-                    <div class="footer__circle">
-                        <span class="footer__social-icon"><img src="assets/icons/instagram.png"
+                    <a href="#">
+                        <div class="footer__circle">
+                          <span class="footer__social-icon"><img src="assets/icons/facebook.png"
+                                                                 alt="Facebook Icon"></span>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="footer__circle">
+                            <span class="footer__social-icon"><img src="assets/icons/instagram.png"
                                                                alt="Instagram Icon"></span>
-                    </div>
-                    <div class="footer__circle">
-                        <span class="footer__social-icon"><img src="assets/icons/linkedin.png"
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="footer__circle">
+                            <span class="footer__social-icon"><img src="assets/icons/linkedin.png"
                                                                alt="LinkedIn Icon"></span>
-                    </div>
-                    <div class="footer__circle">
-                        <span class="footer__social-icon"><img src="assets/icons/twitter.png" alt="Twitter Icon"></span>
-                    </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="footer__circle">
+                            <span class="footer__social-icon"><img src="assets/icons/twitter.png"
+                                                                   alt="Twitter Icon"></span>
+                        </div>
+                    </a>
                 </div>
 
             </li>
