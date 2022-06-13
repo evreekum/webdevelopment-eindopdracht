@@ -57,7 +57,11 @@ const fetchData = async (ingredients, mealType) => {
                 app_key: 'd8f7fb26122382212dc8fd7bff0570b7',
                 app_id: 'eb071f48',
                 q: ingredients,
-                mealType: mealType
+                mealType: mealType,
+                CuisineType: cuisine,
+                Diet: diet,
+                totalTime: time
+
 
             }
 
@@ -66,6 +70,7 @@ const fetchData = async (ingredients, mealType) => {
         console.log(response.data.hits)
         createElement(response.data.hits);
 
+// Catch block
     } catch (err) {
         console.error(err);
     }
@@ -75,8 +80,6 @@ const fetchData = async (ingredients, mealType) => {
 
 
 
-
-// Catch block
 
 
 export default fetchData;

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
+    <link rel="recipe-page" href="recipe-page.html">
     <link rel="stylesheet" href="./assets/fonts/fonts.css">
     <title>The Clueless Cook - Home</title>
 </head>
@@ -60,7 +61,8 @@
                     <option disabled selected>Meal type</option>
                     <option value="breakfast">Breakfast</option>
                     <option value="brunch">Brunch</option>
-                    <option value="lunch/dinner">Lunch/Dinner</option>
+                    <option value="lunch">Lunch</option>
+                    <option value="dinner">Dinner</option>
                     <option value="snack">Snack</option>
                     <option value="teatime">Teatime</option>
                 </select>
@@ -69,11 +71,16 @@
             <label for="cuisine">
                 <select name="cuisine" id="cuisine">
                     <option disabled selected>cuisine</option>
-                    <option>indian</option>
-                    <option>italian</option>
-                    <option>dutch</option>
-                    <option>chinese</option>
-                    <option>indonesian</option>
+                    <option value="american">american</option>
+                    <option value="asian">asian</option>
+                    <option value="british">british</option>
+                    <option value="caribbean">caribbean</option>
+                    <option value="central-europe">central europe</option>
+                    <option value="chinese">chinese</option>
+                    <option value="eastern-europe">eastern europe</option>
+                    <option value="french">french</option>
+                    <option value=""></option>
+                    <option value=""></option>
                 </select>
             </label>
 
@@ -92,11 +99,12 @@
             <label for="time">
                 <select name="time" id="time">
                     <option disabled selected>time</option>
-                    <option>Retail</option>
-                    <option>Retail</option>
-                    <option>Retail</option>
-                    <option>Retail</option>
-                    <option>Retail</option>
+                    <option value="0">0 min.</option>
+                    <option value="5">5 min.</option>
+                    <option value="10">10 min.</option>
+                    <option value="15">15 min.</option>
+                    <option value="20">20 min.</option>
+
                 </select>
             </label>
 
@@ -104,7 +112,7 @@
         </div>
     </div>
 
-<div class="inner-container">
+<div class="main-recipe-inner-container inner-container">
     <ul id="main__recipes-results-list"></ul>
 </div>
 

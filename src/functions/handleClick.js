@@ -24,6 +24,6 @@ submitSearch.addEventListener("click", ()=>{
     const diet = selectDiet.value
     const time = selectTime.value
 
+    // fetchData(ingredients, mealType);
     fetchData(ingredients, mealType, cuisine, diet, time);
-
 });
