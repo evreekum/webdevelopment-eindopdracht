@@ -1,7 +1,6 @@
 {
   "name": "integrale-eindopdracht-webdevelopment-evreekum",
   "version": "1.0.0",
-  "description": "",
   "main": "src/app.js",
   "scripts": {
     "start": "parcel src/index.html",
@@ -17,5 +16,14 @@
   },
   "dependencies": {
     "axios": "^0.27.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evreekum/webdevelopment-eindopdracht.git"
+  },
+  "bugs": {
+    "url": "https://github.com/evreekum/webdevelopment-eindopdracht/issues"
+  },
+  "homepage": "https://github.com/evreekum/webdevelopment-eindopdracht#readme",
+  "description": ""
 }

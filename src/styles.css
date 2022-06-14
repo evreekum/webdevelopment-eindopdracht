@@ -51,6 +51,37 @@ h2 {
     color: var(--dark-bg-font-color);
 }
 
+h3 {
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+h4 {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 8px;
+}
+
+h5 {
+    font-size: 12px;
+    font-weight: 500;
+    padding-bottom: 8px;
+}
+
+li > p {
+    font-size: 10px;
+    font-weight: 300;
+    color: var(--light-bg-font-color);
+}
+
+p,
+#ingredients-list,
+.recipe-nutrients-card {
+    font-size: 14px;
+}
+
 li {
     list-style-type: none;
     text-transform: capitalize;
@@ -68,6 +99,19 @@ li a {
 
 select {
     text-transform: capitalize;
+}
+
+.recipe-name {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.recipe-info-text p {
+    font-size: 12px;
+}
+
+.cooking-time {
+    text-transform: lowercase;
 }
 
 
@@ -123,18 +167,21 @@ h2,
     border: 2px solid orange;
 }
 
-/*#main__recipes-results-list {*/
-/*    border: 1px solid deeppink;*/
-/*}*/
+#main__recipes-results-list {
+    border: 1px solid deeppink;
+}
 
-/*.recipe-img {*/
-/*    border: 1px solid greenyellow;*/
-/*}*/
+.recipe-result-img {
+    border: 1px solid greenyellow;
+}
 
-/*.recipe {*/
-/*    border: 2px solid black;*/
-/*}*/
+.recipe {
+    border: 2px solid black;
+}
 
+#recipe-item-wrapper div {
+    border: 2px solid brown;
+}
 
 /* --------------- 3.2 Reusables ----------------------- */
 
@@ -182,6 +229,7 @@ button::after,
     height: 50px;
     margin-left: var(--main-margin-left-right);
     flex-basis: 50%;
+    /*flex-shrink: inherit;*/
 }
 
 
@@ -191,17 +239,10 @@ button::after,
     justify-content: flex-end;
     align-items: center;
     flex-basis: 50%;
+    /*flex-shrink: inherit;*/
     gap: 35px;
     height: 50px;
     margin-right: var(--main-margin-left-right);
-}
-
-.nav-wrapper:first-child {
-
-}
-
-.navigation-list li a {
-
 }
 
 
@@ -234,10 +275,6 @@ button::after,
 
 }
 
-.header__recipes-wrapper {
-
-    /*margin-top: -20px;*/
-}
 
 .header__random-recipe-card {
     display: flex;
@@ -252,8 +289,6 @@ button::after,
 .random-recipe-item {
     height: 100px;
     width: 100px;
-
-
 }
 
 .random-recipe-item a {
@@ -263,6 +298,8 @@ button::after,
 
 /* --------------- 4.3 Main --------------------------- */
 
+
+/* --------------- 4.3.1 Main - Home Page -------------- */
 .main__search-wrapper {
     width: 100%;
     height: 90px;
@@ -281,7 +318,7 @@ button::after,
 #diet,
 #time,
 #search-field {
-    width: 110px;
+    min-width: 110px;
     height: 32px;
     text-align: start;
     padding-left: 15px;
@@ -295,18 +332,7 @@ button::after,
 
 #search-field {
     width: 200px;
-    height: 32px;
 }
-
-
-/*.main__recipes-wrapper {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    min-width: 30%;*/
-
-/*}*/
-
 
 #main__recipes-results-list {
     width: 100%;
@@ -319,32 +345,33 @@ button::after,
     /*margin: 10px;*/
 }
 
-.recipe {
+.recipe-result-item {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     list-style-type: none;
     border-radius: 4px;
-    min-width: 30%;
-    min-height: 250px;
+    min-width: calc(100% * (1/3));
+    min-height: 220px;
     margin-bottom: 30px;
     break-inside: avoid-column;
     background-color: var(--light-bg-font-color);
-    box-shadow: 0px 4px 9px -2px rgba(0,0,0,0.44);
+    box-shadow: 0 4px 9px -2px rgba(0, 0, 0, 0.44);
 }
 
+/*calc(100% * (1/2) - 150px - 0px);*/
 
-.recipe-img {
+.recipe-result-img {
     height: 150px;
     /*width: 100%;*/
     object-fit: cover;
     position: relative;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
-.recipe-container {
+.recipe-result-card {
     /*background-color: var(--light-bg-font-color);*/
     display: flex;
     flex-direction: column;
@@ -352,14 +379,9 @@ button::after,
     /*align-content: flex-end;*/
     margin-top: 0;
     padding: 10px;
-    height: 100px;
-    box-shadow: 0px -5px 5px -2px rgba(0,0,0,0.3);
-
+    height: 70px;
+    box-shadow: 0 -5px 5px -2px rgba(0, 0, 0, 0.3);
     z-index: 2;
-}
-
-.recipe-name {
-    /*padding-bottom: 7px;*/
 }
 
 .recipe-info-text {
@@ -370,13 +392,124 @@ button::after,
     gap: 3px;
 }
 
-.recipe-info-text {
+
+/* --------------- 4.3.2 Main - Recipe Page ---------------------- */
+.main__recipe-page-inner-container {
+    padding-bottom: 30px;
+    /*padding-top: 30px;*/
+}
+
+#recipe-item-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
 }
 
-.cooking-time {
-    text-transform: lowercase;
+.recipe-page-card {
+    margin-top: 30px;
 
+}
+
+
+.recipe-description-card {
+    width: 45%;
+    height: max-content;
+    /*padding: 10px;*/
+}
+
+.recipe-image-card {
+    border: 5px solid black;
+    width: 30%;
+    height: 100px;
+}
+
+.recipe-ingredients-card {
+    width: calc(100% * (1/2) - 150px - 0px);
+    height: max-content;
+    /*padding: 10px 10px 10px 30px;*/
+}
+
+#ingredients-list li {
+    list-style-type: inherit;
+    margin-left: 25px;
+    padding-left: 10px;
+}
+
+.recipe-nutrients-card {
+    width: calc(100% * (1/2) - 0px - 150px);
+}
+
+.recipe-health-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    height: auto;
+}
+
+#health-label-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 14px;
+
+}
+
+#health-label-list {
+
+}
+
+.health-background-shape {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--dark-bg-font-color);
+    background-color: var(--button-color);
+    padding-right: 10px;
+    padding-left: 10px;
+    width: fit-content;
+    min-width: 60px;
+    height: 28px;
+    /*align-items: center;*/
+    border-radius: 15px;
+    /*text-align: center;*/
+    font-weight: 500;
+}
+
+
+/*---------------- 4.2.3 Main - Calculator Page ------- */
+.calculator__inner-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#calculator-field,
+#calculator__amount-field {
+    width: 200px;
+    height: 32px;
+    text-align: start;
+    padding-left: 15px;
+    font-family: poppins, sans-serif;
+    font-size: 12px;
+    border-radius: 4px;
+    color: var(--main-font-color);
+    border: 1px solid var(--dark-bg-font-color);
+}
+
+#calculator__search-button,
+#calculator__servings-button {
+    border: 1px solid var(--dark-bg-font-color);
+}
+
+#calculator__amount-field {
+    width: 100px;
 }
 
 /* --------------- 4.4 Footer ------------------------- */
@@ -421,13 +554,14 @@ button::after,
     align-items: center;
 }
 
-h4 {
-    padding-bottom: 10px;
-}
 
 img {
     height: 10px;
     color: var(--button-color);
+}
+
+.footer__icon-card {
+    padding-top: 5px;
 }
 
 /* ------------------------------- 5. Media Queries -------------------------------- */

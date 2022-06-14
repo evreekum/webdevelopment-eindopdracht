@@ -19,7 +19,7 @@
             <ul class="navigation-list">
                 <li><a href="index.html">home</a></li>
                 <li><a href="#about-footer">about</a></li>
-                <li><a href="#">calculator</a></li>
+                <li><a href="calculator.html">calculator</a></li>
             </ul>
         </nav>
     </div>
@@ -50,7 +50,7 @@
 <main class="outer-container">
 
     <div class="main__search-wrapper inner-container">
-<!--temporary DIV this is a FORM!-->
+        <!--temporary DIV this is a FORM!-->
         <div class="search__form">
             <label for="search-field">
                 <input type="search" name="search-field" id="search-field" placeholder="Recipe Search"/>
@@ -58,7 +58,7 @@
 
             <label for="meal-type">
                 <select name="meal-type" id="meal-type">
-                    <option disabled selected>Meal type</option>
+                    <option value="" disabled selected>Meal type</option>
                     <option value="breakfast">Breakfast</option>
                     <option value="brunch">Brunch</option>
                     <option value="lunch">Lunch</option>
@@ -70,7 +70,7 @@
 
             <label for="cuisine">
                 <select name="cuisine" id="cuisine">
-                    <option disabled selected>cuisine</option>
+                    <option value="" disabled selected>cuisine</option>
                     <option value="american">american</option>
                     <option value="asian">asian</option>
                     <option value="british">british</option>
@@ -79,14 +79,26 @@
                     <option value="chinese">chinese</option>
                     <option value="eastern-europe">eastern europe</option>
                     <option value="french">french</option>
-                    <option value=""></option>
-                    <option value=""></option>
+                    <option value="greek">greek</option>
+                    <option value="indian">indian</option>
+                    <option value="italian">italian</option>
+                    <option value="japanese">japanese</option>
+                    <option value="korean">korean</option>
+                    <option value="kosher">kosher</option>
+                    <option value="mediterranean">mediterranean</option>
+                    <option value="mexican">mexican</option>
+                    <option value="middle eastern">middle eastern</option>
+                    <option value="nordic">nordic</option>
+                    <option value="south american">south american</option>
+                    <option value="south east asian">south east asian</option>
+                    <option value="world">world</option>
+
                 </select>
             </label>
 
             <label for="diet">
                 <select name="diet" id="diet">
-                    <option disabled selected>diet</option>
+                    <option value = "" disabled selected>diet</option>
                     <option value="balanced">balanced</option>
                     <option value="high-fiber">high-fiber</option>
                     <option value="high-protein">high-protein</option>
@@ -98,12 +110,26 @@
 
             <label for="time">
                 <select name="time" id="time">
-                    <option disabled selected>time</option>
-                    <option value="0">0 min.</option>
-                    <option value="5">5 min.</option>
-                    <option value="10">10 min.</option>
-                    <option value="15">15 min.</option>
-                    <option value="20">20 min.</option>
+                    <option value="" disabled selected>time</option>
+                    <option value="0-15">0-15 min.</option>
+                    <option value="15-30">15-30 min.</option>
+                    <option value="30-45">30-45 min.</option>
+                    <option value="45-60">45-60 min.</option>
+                    <option value="60-75">60-75 min.</option>
+                    <option value="75-90">75-90 min.</option>
+                    <option value="90-105">90-105 min.</option>
+                    <option value="105-120">105-120 min.</option>
+                    <option value="120-135">120-135 min.</option>
+                    <option value="135-150">135-150 min.</option>
+                    <option value="150-165">150-165 min.</option>
+                    <option value="165-180">165-180 min.</option>
+                    <option value="180-195">180-195 min.</option>
+                    <option value="195-210">195-210 min.</option>
+                    <option value="210-235">210-235 min.</option>
+                    <option value="235-250">235-250 min.</option>
+                    <option value="250-265">250-265 min.</option>
+                    <option value="265-280">265-280 min.</option>
+                    <option value="280-295">280-295 min.</option>
 
                 </select>
             </label>
@@ -112,36 +138,36 @@
         </div>
     </div>
 
-<div class="main-recipe-inner-container inner-container">
-    <ul id="main__recipes-results-list"></ul>
-</div>
+    <div class="main-recipe-inner-container inner-container">
+        <ul id="main__recipes-results-list"></ul>
+    </div>
 
 
- <!--   <div class="main__recipes-wrapper inner-container">
-        <ul id="main__recipes-results-list">
-            <li class="recipe">Recipe 1</li>
-            <li class="recipe">Recipe 2</li>
-            <li class="recipe">Recipe 3</li>
-            <li class="recipe">Recipe 4</li>
-            <li class="recipe">Recipe 5</li>
-            <li class="recipe">Recipe 6</li>
-            <li class="recipe">Recipe 6</li>
-            <li class="recipe">Recipe 6</li>
-            <li class="recipe">Recipe 6</li>
-            <li class="recipe">Recipe 6</li>
-            <li class="recipe">Recipe 6</li>
-            <li class="recipe">Recipe 6</li>
-            <li class="recipe">Recipe 6</li>
-            <li class="recipe">Recipe 6</li>
-            <li class="recipe">Recipe 6</li>
-            <li class="recipe">Recipe 6</li>
-            <li class="recipe">Recipe 6</li>
-            <li class="recipe">Recipe 6</li>
-            <li class="recipe">Recipe 6</li>
-            <li class="recipe">Recipe 6</li>
-            <li class="recipe">Recipe 6</li>
-        </ul>
-    </div>-->
+    <!--   <div class="main__recipes-wrapper inner-container">
+           <ul id="main__recipes-results-list">
+               <li class="recipe">Recipe 1</li>
+               <li class="recipe">Recipe 2</li>
+               <li class="recipe">Recipe 3</li>
+               <li class="recipe">Recipe 4</li>
+               <li class="recipe">Recipe 5</li>
+               <li class="recipe">Recipe 6</li>
+               <li class="recipe">Recipe 6</li>
+               <li class="recipe">Recipe 6</li>
+               <li class="recipe">Recipe 6</li>
+               <li class="recipe">Recipe 6</li>
+               <li class="recipe">Recipe 6</li>
+               <li class="recipe">Recipe 6</li>
+               <li class="recipe">Recipe 6</li>
+               <li class="recipe">Recipe 6</li>
+               <li class="recipe">Recipe 6</li>
+               <li class="recipe">Recipe 6</li>
+               <li class="recipe">Recipe 6</li>
+               <li class="recipe">Recipe 6</li>
+               <li class="recipe">Recipe 6</li>
+               <li class="recipe">Recipe 6</li>
+               <li class="recipe">Recipe 6</li>
+           </ul>
+       </div>-->
 
 </main>
 
@@ -151,27 +177,27 @@
     <div class="footer__wrapper inner-container">
         <ul class="footer-list">
             <li>
-                <h4>information</h4>
+                <h5>information</h5>
                 <p>Nullam a enim</p>
                 <p>Quisque cursus</p>
                 <p>Cras egestas</p>
                 <p>Nunc vitae</p>
             </li>
             <li id="about-footer">
-                <h4>about</h4>
+                <h5>about</h5>
                 <p>Quisque cursus</p>
                 <p>Cras egestas</p>
                 <p>Nunc vitae</p>
             </li>
             <li>
-                <h4>contact</h4>
+                <h5>contact</h5>
                 <p>Cras egestas</p>
                 <p>Nunc vitae</p>
                 <p>Nullam a enim</p>
             </li>
 
             <li class="footer__social-wrapper">
-                <h4>Social</h4>
+                <h5>Social</h5>
                 <div class="footer__icon-card">
                     <a href="#">
                         <div class="footer__circle">
@@ -182,13 +208,13 @@
                     <a href="#">
                         <div class="footer__circle">
                             <span class="footer__social-icon"><img src="assets/icons/instagram.png"
-                                                               alt="Instagram Icon"></span>
+                                                                   alt="Instagram Icon"></span>
                         </div>
                     </a>
                     <a href="#">
                         <div class="footer__circle">
                             <span class="footer__social-icon"><img src="assets/icons/linkedin.png"
-                                                               alt="LinkedIn Icon"></span>
+                                                                   alt="LinkedIn Icon"></span>
                         </div>
                     </a>
                     <a href="#">

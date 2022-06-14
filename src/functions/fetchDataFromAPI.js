@@ -1,5 +1,5 @@
 import axios from "axios";
-import createElement from "./createElementFunction";
+import createElementSearch from "./createElementFunction";
 
 // Fetch Data uit API
 
@@ -42,33 +42,34 @@ async function fetchDataFoods() {
 
 
 // Fetch data functie
-const fetchData = async (ingredients, mealType) => {
+const fetchData = async (ingredients, mealType, cuisine, diet, time) => {
 
     // Opslaan van URI en endpoint
-    const URI = "https://api.edamam.com"
-    const endpoint = "/api/recipes/v2"
+    const URI = "https://api.edamam.com";
+    const endpoint = "/api/recipes/v2";
+
     // Try block
     try {
         // Response van request opslaan
-        const response = await axios.get(`${URI}${endpoint}`, {
+        const response = await axios.get( `${URI}${endpoint}`,{
             // Create Elements functie aanroepen en parameters toevoegen
             params: {
                 type: 'public',
                 app_key: 'd8f7fb26122382212dc8fd7bff0570b7',
                 app_id: 'eb071f48',
                 q: ingredients,
-                mealType: mealType,
-                CuisineType: cuisine,
-                Diet: diet,
-                totalTime: time
+                mealType: mealType ? mealType : null,
+                cuisineType: cuisine ? cuisine : null,
+                diet: diet ? diet : null,
+                time: time ? time : null
 
 
             }
 
 
         } )
-        console.log(response.data.hits)
-        createElement(response.data.hits);
+        console.log(response.data.hits);
+        createElementSearch(response.data.hits);
 
 // Catch block
     } catch (err) {
@@ -76,10 +77,6 @@ const fetchData = async (ingredients, mealType) => {
     }
 
 
-}
-
-
-
-
+};
 
 export default fetchData;

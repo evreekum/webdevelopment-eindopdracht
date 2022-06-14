@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="./assets/fonts/fonts.css">
-    <title id="tab-recipe-title">Recipe</title>
+    <title>Calorie Calculator</title>
 </head>
+
 
 <body class="body__outer-container">
 
@@ -26,69 +27,41 @@
 </header>
 
 <main class="outer-container">
+    <div class="calculator__inner-container inner-container">
 
-    <div class="main__recipe-page-inner-container inner-container">
-        <div id="recipe-item-wrapper">
-            <div class="recipe-description-card recipe-page-card">
-                <h3>recipe name here</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
-                    Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a,
-                    pede.
-
-                    Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean
-                    dignissim pellentesque felis.
-
-                    Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in,
-                    diam. Sed arcu. Cras consequat.
-
-                    Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros eu
-                    erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus,
-                    metus.
-
-                </p>
-            </div>
-
-            <div class="recipe-image-card recipe-page-card">
-                <p>balka bkasjaefl</p>
-<!--                <img src="" alt="">-->
-            </div>
-            <div class="recipe-ingredients-card recipe-page-card">
-                <h4>ingredients</h4>
-                <ul id="ingredients-list">
-                    <li>apple</li>
-                    <li>peer</li>
-                    <li>banaan</li>
-                    <li>sinaasappel</li>
-                    <li>etc</li>
-                    <li>etc</li>
-                    <li>etc</li>
-                    <li>etc</li>
-                    <li>etc</li>
-                    <li>etc</li>
-
-                </ul>
-            </div>
-
-            <div class="recipe-nutrients-card recipe-page-card">
-                <h4>nutrients</h4>
-                <table>
-
-                </table>
-            </div>
-
-            <div class="recipe-health-card recipe-page-card">
-                <h4>health labels</h4>
-                <ul id="health-label-list">
-                    <li class="health-background-shape">test</li>
-                    <li class="health-background-shape">test</li>
-                    <li class="health-background-shape">test</li>
-                    <li class="health-background-shape">test langst</li>
-                    <li class="health-background-shape">test langer</li>
-                    <li class="health-background-shape">test langer word het niet</li>
-                </ul>
-
-            </div>
+        <h3>calorie calculator</h3>
+        <div class="calculator__search-wrapper">
+            <label for="calculator-field">
+                <input type="search" name="calculator-field" id="calculator-field" placeholder="Barcode / product">
+            </label>
+            <button type="button" id="calculator__search-button">search</button>
         </div>
+
+
+        <div class="calculator__item-result-wrapper">
+            <ul id="calculator__item-card">
+
+            </ul>
+        </div>
+
+
+        <div class="calculator__amount-servings-wrapper">
+            <label for="calculator__amount-field">
+                Amount
+                <input type="text" name="calculator__amount-field" id="calculator__amount-field">
+            </label>
+            <label for="calculator__servings-button">
+                Serving(s)
+                <button type="button" id="calculator__servings-button">+ Add</button>
+            </label>
+        </div>
+
+        <div>
+            <ul id="calculator__results-card">
+
+            </ul>
+        </div>
+
 
     </div>
 
