@@ -53,8 +53,11 @@ h2 {
 
 h3 {
     text-transform: capitalize;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 700;
+    word-spacing: 2px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 h4 {
@@ -155,7 +158,8 @@ h1,
 .main__subtitle,
 h2,
 .navigation-list,
-.footer-list {
+.footer-list,
+h3{
     border: 1px solid dodgerblue;
 }
 
@@ -183,10 +187,19 @@ h2,
     border: 2px solid brown;
 }
 
+#calculator__results-card,
+#calculator__item-card,
+.calculator__amount-servings-wrapper,
+.calculator__search-wrapper {
+    border: 2px solid darkslateblue;
+    width: 50%;
+    height: 100px;
+}
+
 /* --------------- 3.2 Reusables ----------------------- */
 
 button,
-.header__button a {
+.header__button {
     text-transform: capitalize;
     text-decoration: none;
     width: 120px;
@@ -267,7 +280,7 @@ button::after,
 
 .header__button {
     width: 140px;
-    padding-left: 0px;
+    padding-left: 15px;
 }
 
 .header-text {
@@ -399,7 +412,7 @@ button::after,
     /*padding-top: 30px;*/
 }
 
-#recipe-item-wrapper {
+#main__recipe-page-wrapper {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -446,7 +459,7 @@ button::after,
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 50%;
+    width: 45%;
     height: auto;
 }
 
@@ -490,7 +503,7 @@ button::after,
     align-items: flex-start;
 }
 
-#calculator-field,
+#calculator__field,
 #calculator__amount-field {
     width: 200px;
     height: 32px;
@@ -510,6 +523,22 @@ button::after,
 
 #calculator__amount-field {
     width: 100px;
+    margin-right: 45px;
+}
+
+#calculator__servings-button {
+    width: 90px;
+    margin-left: 20px;
+    text-align: center;
+    padding-left: 0;
+}
+#calculator__servings-button::after {
+    content: "";
+    display: inline-block;
+    padding-left: 0;
+}
+.calculator__servings {
+    font-size: 12px;
 }
 
 /* --------------- 4.4 Footer ------------------------- */
