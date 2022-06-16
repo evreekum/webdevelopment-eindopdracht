@@ -1,5 +1,5 @@
 import axios from "axios";
-import createElementSearch from "./createElementFunction";
+import createElementSearch from "./createElementHomePage";
 
 // Fetch Data uit API
 
@@ -54,7 +54,7 @@ const fetchData = async (ingredients, mealType, cuisine, diet, time) => {
         const response = await axios.get(`${URI}${endpoint}`, {
             // Create Elements functie aanroepen en parameters toevoegen
             params: {
-                type: 'public',
+                type: "public",
                 app_key: "d8f7fb26122382212dc8fd7bff0570b7",
                 app_id: "eb071f48",
                 q: ingredients,
@@ -68,12 +68,11 @@ const fetchData = async (ingredients, mealType, cuisine, diet, time) => {
         console.log(response.data.hits);
         createElementSearch(response.data.hits);
 
+
 // Catch block
     } catch (err) {
         console.error(err);
-
     }
-
 
 };
 

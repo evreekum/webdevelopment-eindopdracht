@@ -28,9 +28,9 @@
 <main class="recipe__page-outer-container outer-container">
 
     <div class="main__recipe-page-inner-container inner-container">
-        <ul id="main__recipe-page-wrapper">
-            <!--<div class="recipe-description-card recipe-page-card">
-                <h3 id="recipe-page-title">recipe name here</h3>
+        <div id="main__recipe-page-wrapper">
+            <div id="recipe-description-card" class="recipe-page-card">
+                <h3 id="recipe-page-name">recipe name here</h3>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
                     Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a,
                     pede.
@@ -48,11 +48,10 @@
                 </p>
             </div>
 
-            <div class="recipe-image-card recipe-page-card">
-                <p>balka bkasjaefl</p>
-                &lt;!&ndash;                <img src="" alt="">&ndash;&gt;
+            <div id="recipe-page-img-card" class="recipe-page-card">
             </div>
-            <div class="recipe-ingredients-card recipe-page-card">
+
+            <div id="recipe-ingredients-card" class="recipe-page-card">
                 <h4>ingredients</h4>
                 <ul id="ingredients-list">
                     <li>apple</li>
@@ -69,40 +68,78 @@
                 </ul>
             </div>
 
-            <div class="recipe-nutrients-card recipe-page-card">
+            <div id="recipe-nutrients-card" class="recipe-page-card">
                 <h4>nutrients</h4>
 
-&lt;!&ndash;                <table>&ndash;&gt;
-&lt;!&ndash;                    <thead>&ndash;&gt;
-&lt;!&ndash;                        <td>&ndash;&gt;
-&lt;!&ndash;                            <th>Energy</th>&ndash;&gt;
-&lt;!&ndash;                            <th>Fat</th>&ndash;&gt;
-&lt;!&ndash;                            <th>Carbs</th>&ndash;&gt;
-&lt;!&ndash;                            <th>Sugar</th>&ndash;&gt;
-&lt;!&ndash;                            <th>Protein</th>&ndash;&gt;
-&lt;!&ndash;                            <th>Sodium</th>&ndash;&gt;
-&lt;!&ndash;                        </td>&ndash;&gt;
-&lt;!&ndash;                    </thead>&ndash;&gt;
+                <table id="nutrients-table">
+                    <!--<thead>
+                    <tr>
+                        <th>Energy</th>
+                    </tr>
+                    <tr>
+                        <th>Fat</th>
+                    </tr>
+                    <tr>
+                        <th>Carbs</th>
+                    </tr>
+                    <tr>
+                        <th>Sugar</th>
+                    </tr>
+                    <tr>
+                        <th>Protein</th>
+                    </tr>
+                    <tr>
+                        <th>Sodium</th>
+                    </tr>
 
-&lt;!&ndash;                    <tbody>&ndash;&gt;
 
-&lt;!&ndash;                    </tbody>&ndash;&gt;
-&lt;!&ndash;                </table>&ndash;&gt;
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td>1080</td>
+                        <td>kCal</td>
+                    </tr>
+                    <tr>
+                        <td>80</td>
+                        <td>g</td>
+                    </tr>
+                    <tr>
+                        <td>56</td>
+                        <td>g</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>g</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>g</td>
+                    </tr>
+                    <tr>
+                        <td>1900</td>
+                        <td>mg</td>
+                    </tr>
+
+                    </tbody>-->
+                </table>
             </div>
 
-            <div class="recipe-health-card recipe-page-card">
+            <div id="recipe-health-card" class="recipe-page-card">
                 <h4>health labels</h4>
                 <ul id="health-label-list">
-                    <li class="health-background-shape">test</li>
-                    <li class="health-background-shape">test</li>
-                    <li class="health-background-shape">test</li>
-                    <li class="health-background-shape">test langst</li>
-                    <li class="health-background-shape">test langer</li>
-                    <li class="health-background-shape">test langer word het niet</li>
+                    <li class="health-background-shape">Peanut-Free</li>
+                    <li class="health-background-shape">Kidney-Friendly</li>
+                    <li class="health-background-shape">Egg-Free</li>
+                    <li class="health-background-shape">Lactose-Free</li>
+                    <li class="health-background-shape">Gluten-Free</li>
+                    <li class="health-background-shape">Pork-Free</li>
+                    <li class="health-background-shape">Sesame-Free</li>
+                    <li class="health-background-shape">Alcohol-Free</li>
                 </ul>
 
-            </div>-->
-        </ul>
+            </div>
+        </div>
 
     </div>
 
@@ -167,7 +204,7 @@
 
 </footer>
 
-<script type="module" src="functions/getParamFromUri.js"></script>
-<script type="module" src="app.js"></script>
+<!--<script type="module" src="functions/getParamFromUri.js"></script>-->
+<script type="module" src="main-recipe-page.js"></script>
 </body>
 </html>

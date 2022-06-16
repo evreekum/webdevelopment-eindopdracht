@@ -12,14 +12,12 @@ const createElementSearch = (recipeArray) => {
 
     return recipeArray.map((recipe) => {
 
-        const calories = (`${recipe.recipe.calories}`);
-        console.log(calories);
-        const caloriesRound = Math.round((calories));
+        const caloriesRound = Math.round(recipe.recipe.calories);
         const id = recipe.recipe.uri.split("_")[1];
 
         recipeList.innerHTML += `
             <li id="to-recipe-result-item" class="recipe-result-item">
-                <a id="next-page" href="recipe-page.html">
+                <a id="next-page" href="/recipe-page.html?id=${id}" target="_blank">
                     <img class="recipe-result-img"
                            src="${recipe.recipe.images.REGULAR.url}" alt="Meal Image"/>              
                     <div class="recipe-result-card">

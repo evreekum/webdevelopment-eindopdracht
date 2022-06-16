@@ -28,15 +28,15 @@ submitSearch.addEventListener("click", ()=>{
     fetchData(ingredients, mealType, cuisine, diet, time);
 });
 
-searchFieldIngredients.addEventListener("keypress", ()=>{
-    const ingredients = searchFieldIngredients.value;
-    const mealType = selectMealType.value;
-    const cuisine = selectCuisine.value;
-    const diet = selectDiet.value;
-    const time = selectTime.value;
-
-    fetchData(ingredients, mealType, cuisine, diet, time);
-});
+// searchFieldIngredients.addEventListener("keypress", ()=>{
+//     const ingredients = searchFieldIngredients.value;
+//     const mealType = selectMealType.value;
+//     const cuisine = selectCuisine.value;
+//     const diet = selectDiet.value;
+//     const time = selectTime.value;
+//
+//     fetchData(ingredients, mealType, cuisine, diet, time);
+// });
 
 
 

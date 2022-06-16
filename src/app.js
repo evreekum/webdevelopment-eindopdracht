@@ -1,7 +1,5 @@
 import './functions/fetchDataFromAPI';
 import './functions/handleClick';
 import './functions/fetchDataRecipePage';
+import './functions/getParamFromUri';
 
-// import fetchDataRecipe from "./functions/fetchDataRecipePage";
-//
-// fetchDataRecipe()
