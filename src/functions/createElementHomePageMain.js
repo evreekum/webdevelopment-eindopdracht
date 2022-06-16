@@ -16,7 +16,7 @@ const createElementSearch = (recipeArray) => {
         const id = recipe.recipe.uri.split("_")[1];
 
         recipeList.innerHTML += `
-            <li id="to-recipe-result-item" class="recipe-result-item">
+            <li class="recipe-result-item">
                 <a id="next-page" href="/recipe-page.html?id=${id}" target="_blank">
                     <img class="recipe-result-img"
                            src="${recipe.recipe.images.REGULAR.url}" alt="Meal Image"/>              
@@ -24,7 +24,7 @@ const createElementSearch = (recipeArray) => {
                         <p class="recipe-name">${recipe.recipe.label}</p>
                         <div class="recipe-info-text">
                             <p class="recipe-calories-ingredients"><strong>${caloriesRound}</strong> calories | <strong>${recipe.recipe.ingredientLines.length}</strong> ingredients</p>
-                            <p class="cooking-time"><img src="${timeImage.src}" alt="Clock Icon"> <strong>${recipe.recipe.totalTime}</strong> min.</p>
+                            <p class="cooking-time"><img class="time-icon" src="${timeImage.src}" alt="Clock Icon"> <strong>${recipe.recipe.totalTime}</strong> min.</p>
                         </div>
                     </div>
                 </a>
