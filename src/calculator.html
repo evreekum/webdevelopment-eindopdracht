@@ -28,40 +28,72 @@
 
 <main class="outer-container">
     <div class="calculator__inner-container inner-container">
-
-        <h3>calorie calculator</h3>
         <div class="calculator__search-wrapper">
-            <label for="calculator__field">
-                <input type="search" name="calculator__field" id="calculator__field" placeholder="Barcode / product">
-            </label>
-            <button type="button" id="calculator__search-button">search</button>
+
+            <h3>calorie calculator</h3>
+            <form id="calculator__submit-search">
+                <label for="calculator__field">
+                    <input type="text" name="calculator__field" id="calculator__field"
+                           placeholder="Barcode / product">
+                </label>
+                <button type="submit" id="calculator__search-button">search</button>
+            </form>
+
+            <div class="calculator__item-result-card">
+                <table id="calculator__item-table">
+                    <thead class="calculator__table">
+                    <tr>
+                        <th>product</th>
+                        <th>quantity</th>
+                        <th>label</th>
+                    </tr>
+                    </thead>
+                    <tbody class="calculator__table">
+                    <tr class="calculator__data" id="calculator__result-table">
+                        <!--     <td>Naam</td>
+                             <td>Weight</td>
+                             <td>gram</td>-->
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <form id="calculator__amount-submit">
+                <label for="calculator__amount-field">
+                    <input type="text" name="calculator__amount-field" id="calculator__amount-field"
+                           placeholder="Amount">
+                </label>
+                <label class="calculator__servings" for="calculator__servings-button">
+                    Serving(s)
+                    <button type="submit" id="calculator__servings-button">+ Add</button>
+                </label>
+            </form>
+            <!--                <div class="calculator__amount-servings-wrapper"> </div>-->
+
+            <div class="calculator__amount-results">
+                <table id="calculator__amount-results-table">
+                    <thead>
+                    <tr class="calculator__label">
+                        <th>product</th>
+                        <th>calories</th>
+                        <th>fat</th>
+                        <th>carbs</th>
+                    </tr>
+                    </thead>
+
+                    <tbody id="#temp-amount-border">
+                    <tr class="calculator__data">
+                        <td id="amount__total">total</td>
+                        <td id="calculator__total-calories">kCal</td>
+                        <td id="calculator__total-fat">g</td>
+                        <td id="calculator__total-carbs">g</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </div>
-
-
-        <div class="calculator__item-result-wrapper">
-            <ul id="calculator__item-card">
-
-            </ul>
-        </div>
-
-
-        <div class="calculator__amount-servings-wrapper">
-            <label for="calculator__amount-field">
-                <input type="text" name="calculator__amount-field" id="calculator__amount-field" placeholder="Amount">
-            </label>
-            <label class="calculator__servings" for="calculator__servings-button">
-                Serving(s)
-                <button type="button" id="calculator__servings-button">+ Add</button>
-            </label>
-        </div>
-
-        <div>
-            <ul id="calculator__results-card">
-
-            </ul>
-        </div>
-
-
     </div>
 
 </main>
@@ -79,15 +111,16 @@
             </li>
             <li id="about-footer">
                 <h5>about</h5>
-                <p>Quisque cursus</p>
-                <p>Cras egestas</p>
-                <p>Nunc vitae</p>
+                <p>This website is</p>
+                <p>made by</p>
+                <p>Evelien van Reekum</p>
+                <p>June 2022</p>
             </li>
             <li>
                 <h5>contact</h5>
-                <p>Cras egestas</p>
-                <p>Nunc vitae</p>
-                <p>Nullam a enim</p>
+                <p>e.v.reekum@gmail.com</p>
+                <p>Phone number:</p>
+                <p>+31648769524</p>
             </li>
 
             <li class="footer__social-wrapper">
@@ -126,6 +159,7 @@
 </footer>
 
 
-<script type="module" src="app.js"></script>
+<script type="module" src="mainCalculator.js"></script>
+
 </body>
 </html>

@@ -1,7 +1,7 @@
 {
   "name": "integrale-eindopdracht-webdevelopment-evreekum",
   "version": "1.0.0",
-  "main": "src/app.js",
+  "main": "src/mainHome.js",
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",

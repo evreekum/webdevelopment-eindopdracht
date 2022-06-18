@@ -1,5 +1,3 @@
-// import fetchDataRecipe from "./fetchDataRecipePage";
-
 //Create element recipe search
 const createElementSearch = (recipeArray) => {
 
@@ -7,8 +5,9 @@ const createElementSearch = (recipeArray) => {
     const timeImage = new Image();
     timeImage.src = require("../assets/icons/time.png");
 
-    // replaceChildren volgens mij niet nodig in een <form> die cleared na elke submit zichzelf
     recipeList.replaceChildren();
+
+
 
     return recipeArray.map((recipe) => {
 
@@ -34,6 +33,4 @@ const createElementSearch = (recipeArray) => {
 };
 
 
-export default createElementSearch;
-
-/*link: /src/recipe-page.html?id=${id}*/
+export default createElementSearch

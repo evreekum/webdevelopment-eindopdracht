@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
-    <link rel="recipe-page" href="recipe-page.html">
     <link rel="stylesheet" href="./assets/fonts/fonts.css">
     <title>The Clueless Cook - Home</title>
 </head>
@@ -18,7 +17,7 @@
             <h2>The Clueless Cook</h2>
             <ul class="navigation-list">
                 <li><a href="index.html">home</a></li>
-                <li><a href="recipe-page.html">about</a></li>
+                <li><a href="#about-footer">about</a></li>
                 <li><a href="calculator.html">calculator</a></li>
             </ul>
         </nav>
@@ -39,7 +38,9 @@
 
     <div class="header__recipes-wrapper inner-container">
         <ul class="header__random-recipe-card" id="header__random-recipes-list">
-            <li class="random-recipe-item"><a href="#">Random Recipe 1</a></li>
+            <a href="#">
+                <li class="random-recipe-item">Random Recipe 1</li>
+            </a>
             <li class="random-recipe-item"><a href="#">Random Recipe 2</a></li>
             <li class="random-recipe-item"><a href="#">Random Recipe 3</a></li>
         </ul>
@@ -99,7 +100,7 @@
 
             <label for="diet">
                 <select name="diet" id="diet">
-                    <option value = "" disabled selected>diet</option>
+                    <option value="" disabled selected>diet</option>
                     <option value="balanced">balanced</option>
                     <option value="high-fiber">high-fiber</option>
                     <option value="high-protein">high-protein</option>
@@ -111,16 +112,16 @@
 
             <label for="time">
                 <select name="time" id="time">
-                    <option value="" disabled selected>time</option>
-                    <option value="0-15">0-15 min.</option>
-                    <option value="15-30">15-30 min.</option>
-                    <option value="30-45">30-45 min.</option>
-                    <option value="45-60">45-60 min.</option>
-                    <option value="60-75">60-75 min.</option>
-                    <option value="75-90">75-90 min.</option>
-                    <option value="90-105">90-105 min.</option>
-                    <option value="105-120">105-120 min.</option>
-                    <option value="120+">120+ min.</option>
+                    <option value="" disabled selected>Time</option>
+                    <option value="0-15">0-15 min</option>
+                    <option value="15-30">15-30 min</option>
+                    <option value="30-45">30-45 min</option>
+                    <option value="45-60">45-60 min</option>
+                    <option value="60-75">60-75 min</option>
+                    <option value="75-90">75-90 min</option>
+                    <option value="90-105">90-105 min</option>
+                    <option value="105-120">105-120 min</option>
+                    <option value="120+">120+ min</option>
 
                 </select>
             </label>
@@ -133,32 +134,6 @@
         <ul id="main__recipes-results-list"></ul>
     </div>
 
-
-    <!--   <div class="main__recipes-wrapper inner-container">
-           <ul id="main__recipes-results-list">
-               <li class="recipe">Recipe 1</li>
-               <li class="recipe">Recipe 2</li>
-               <li class="recipe">Recipe 3</li>
-               <li class="recipe">Recipe 4</li>
-               <li class="recipe">Recipe 5</li>
-               <li class="recipe">Recipe 6</li>
-               <li class="recipe">Recipe 6</li>
-               <li class="recipe">Recipe 6</li>
-               <li class="recipe">Recipe 6</li>
-               <li class="recipe">Recipe 6</li>
-               <li class="recipe">Recipe 6</li>
-               <li class="recipe">Recipe 6</li>
-               <li class="recipe">Recipe 6</li>
-               <li class="recipe">Recipe 6</li>
-               <li class="recipe">Recipe 6</li>
-               <li class="recipe">Recipe 6</li>
-               <li class="recipe">Recipe 6</li>
-               <li class="recipe">Recipe 6</li>
-               <li class="recipe">Recipe 6</li>
-               <li class="recipe">Recipe 6</li>
-               <li class="recipe">Recipe 6</li>
-           </ul>
-       </div>-->
 
 </main>
 
@@ -176,15 +151,16 @@
             </li>
             <li id="about-footer">
                 <h5>about</h5>
-                <p>Quisque cursus</p>
-                <p>Cras egestas</p>
-                <p>Nunc vitae</p>
+                <p>This website is</p>
+                <p>made by</p>
+                <p>Evelien van Reekum</p>
+                <p>June 2022</p>
             </li>
             <li>
                 <h5>contact</h5>
-                <p>Cras egestas</p>
-                <p>Nunc vitae</p>
-                <p>Nullam a enim</p>
+                <p>e.v.reekum@gmail.com</p>
+                <p>Phone number:</p>
+                <p>+31648769524</p>
             </li>
 
             <li class="footer__social-wrapper">
@@ -223,7 +199,6 @@
 </footer>
 
 <a href="recipe-page.html"></a>
-<!--<script type="module" src="functions/getParamFromUri.js"></script>-->
-<script type="module" src="app.js"></script>
+<script type="module" src="mainHome.js"></script>
 </body>
 </html>

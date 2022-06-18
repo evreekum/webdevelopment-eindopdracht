@@ -1,107 +1,128 @@
-/*const selectedRecipe = respons.data.recipe;
-const recipeContainer = document.getElementById("recipe-page-main__outer-container");
-const recipeTitle = selectedRecipe.label;
-const timeImage = new Image();
-timeImage.src = require("./assets/icons/time.png");
-const totalTime = selectedRecipe.totalTime;
-console.log(recipeTitle);
+export const createRecipePageTabTitle = (selectedRecipe) => {
+    const recipePageTabTitle = document.getElementById("tab-recipe-title");
+    const tabTitle = selectedRecipe.label;
 
+    recipePageTabTitle.innerHTML = `
+        ${tabTitle}   
+    `;
+};
 
-recipeCards.innerHTML = `
-                <div class="recipe-description__header-container">
-                <h1>${recipeTitle}</h1>
-                <img src="${timeImage.src}" alt="time-icon">
-                <p>${totalTime} min</p>
-                </div>
-                `*/
+export const createRecipeName = (selectedRecipe) => {
+    const recipeNameCard = document.getElementById("recipe-name-description-card");
+    const recipeName = selectedRecipe.label;
+    const timeIcon = new Image();
+    timeIcon.src = require("/src/assets/icons/time.png");
+    const cookingTime = selectedRecipe.totalTime;
 
+    recipeNameCard.innerHTML = `
+        <div id="recipe-page-name">
+            <h3>${recipeName}</h3>
+            <p><img class="recipe-page-icon" src="${timeIcon.src}" alt="Clock Icon">${cookingTime} min.</p>
+        </div>
+        <p class="recipe-page-description">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+                    Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a,
+                    pede.
 
-/*
-const createElementRecipeCard = (recipes) => {
+                    Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean
+                    dignissim pellentesque felis.
 
-    const recipeCards = document.getElementById("main__recipe-page-inner-container");
-    const timeImage = new Image();
-    timeImage.src = require("../assets/icons/time.png");
+                    Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in,
+                    diam. Sed arcu. Cras consequat.
 
-    recipeCards.replaceChildren();
+                    Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros eu
+                    erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus,
+                    metus.
+                    
+                    Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean
+                    dignissim pellentesque felis.
 
-    return recipes.map((recipe) => {
+                    Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in,
+                    diam. Sed arcu. Cras consequat.
 
-        /!*const id = recipe.recipe.uri.split("_")[1];*!/
-        // const recipeIngredients = recipes.map((recipe) => {
-        //     return ingredientList(recipe.value).map((value: any) => ({
-        //         label: value,
-        //         value
-        //     }),
-        // })
+        </p>
+    
+    `;
+    // console.log(createRecipeName);
+};
 
-        return recipeCards.innerHTML += `
-        
-            
-        `;
+export const createRecipeImage = (selectedRecipe) => {
+    const recipeImageCard = document.getElementById("recipe-page-img-card");
+    const recipeImage = selectedRecipe.images.REGULAR.url;
 
-    })
+    recipeImageCard.innerHTML = `
+        <img class="recipe-image" src="${recipeImage}" alt="Recipe Image">
+    
+    `;
+    // console.log(createRecipeImage);
+};
+
+export const createRecipeIngredientsList = (selectedRecipe) => {
+    const ingredientsForMap = selectedRecipe.ingredientLines;
+
+    ingredientsForMap.map((ingredient) => {
+        const recipeIngredientsList = document.getElementById("ingredients-list");
+
+        recipeIngredientsList.innerHTML += `
+        <li>${ingredient}</li>
+    
+    `;
+    });
+    // console.log(createRecipeIngredientsList);
+};
+
+export const createRecipeNutrientsTable = (selectedRecipe) => {
+    const recipeNutrientsCard = document.getElementById("nutrients-table");
+    const recipeNutrients = selectedRecipe.totalNutrients;
+    const caloriesQuantity = Math.round(recipeNutrients.ENERC_KCAL.quantity);
+    const fatQuantity = Math.round(recipeNutrients.FAT.quantity);
+    const carbsQuantity = Math.round(recipeNutrients.CHOCDF.quantity);
+    const sugarQuantity = Math.round(recipeNutrients.SUGAR.quantity);
+    const proteinQuantity = Math.round(recipeNutrients.PROCNT.quantity);
+    const naQuantity = Math.round(recipeNutrients.NA.quantity);
+
+    recipeNutrientsCard.innerHTML = `
+    <tr>
+       <td>${caloriesQuantity}</td>
+       <td>${recipeNutrients.ENERC_KCAL.unit}</td>
+    </tr>
+    <tr>
+        <td>${fatQuantity}</td>
+        <td>${recipeNutrients.FAT.unit}</td>
+    </tr>
+    <tr>
+        <td>${carbsQuantity}</td>
+        <td>${recipeNutrients.CHOCDF.unit}</td>
+    </tr>
+    <tr>
+        <td>${sugarQuantity}</td>
+        <td>${recipeNutrients.SUGAR.unit}</td>
+    </tr>
+    <tr>
+        <td>${proteinQuantity}</td>
+        <td>${recipeNutrients.PROCNT.unit}</td>
+    </tr>
+    <tr>
+        <td>${naQuantity}</td>
+        <td>${recipeNutrients.NA.unit}</td>
+    </tr>
+           
+    `;
 };
 
 
-export default createElementRecipeCard
-*/
+export const createRecipeHealthLabels = (selectedRecipe) => {
+    const recipeHealthLabels = selectedRecipe.healthLabels;
+
+    recipeHealthLabels.map((healthLabel) => {
+        const recipeHealthLabelsCard = document.getElementById("health-label-list");
+
+        recipeHealthLabelsCard.innerHTML = `
+        <li class="health-background-shape">${healthLabel}</li>  
+    
+    `;
+    });
+
+};
 
 
-/*
-< div
-className = "recipe-page-card" >
-    < div >
-    < h3
-id = "recipe-page-name" >${recipe.recipe.label} < /h3>
-<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
-    Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a,
-    pede.
-
-    Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean
-    dignissim pellentesque felis.
-
-    Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in,
-    diam. Sed arcu. Cras consequat.
-
-    Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros eu
-    erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus,
-    metus.</p>
-</div>
-
-<img className="recipe-page-img" src="${recipe.recipe.images.REGULAR.url}" alt="Recipe Image">
-
-    <div className="recipe-ingredients-card">
-        <h4>ingredients</h4>
-        <ul id="ingredients-list">
-            <li>${recipe.recipe.ingredientLines}</li>
-            <li>${recipe.recipe.ingredientLines}</li>
-        </ul>
-    </div>
-
-    <div className="recipe-nutrients-card">
-        <h4>nutrients</h4>
-        <table>
-            <thead>
-            <tr>
-                <th></th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <div className="recipe-health-card recipe-page-card">
-        <h4>health labels</h4>
-        <ul id="health-label-list">
-
-        </ul>
-
-    </div>
-
-
-</div>*/
