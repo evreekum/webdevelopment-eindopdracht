@@ -1,6 +1,5 @@
 import axios from "axios";
 import createElementSearch from "./createElementHomePageMain";
-// import createElementRandomRecipe from "./createElementHomePageHeader";
 
 const fetchData = async (ingredients, mealType, cuisine, diet, time) => {
 
@@ -18,16 +17,15 @@ const fetchData = async (ingredients, mealType, cuisine, diet, time) => {
                 cuisineType: cuisine ? cuisine : null,
                 diet: diet ? diet : null,
                 time: time ? time : null
-
             }
-        })
+        });
 
-        createElementSearch(response.data.hits.slice(0,18));
+        const recipeHits = response.data.hits;
+        createElementSearch(recipeHits.slice(0,18));
 
     } catch (err) {
         console.error(err);
     }
-
 };
 
-export default fetchData
+export default fetchData;

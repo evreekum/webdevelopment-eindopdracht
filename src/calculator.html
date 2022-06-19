@@ -14,7 +14,7 @@
 
     <div class="navigation__outer-container">
         <nav class="nav-wrapper inner-container">
-            <h2>The Clueless Cook</h2>
+            <h2><a href="index.html">The Clueless Cook</a></h2>
             <ul class="navigation-list">
                 <li><a href="index.html">home</a></li>
                 <li><a href="#about-footer">about</a></li>
@@ -31,41 +31,39 @@
         <div class="calculator__search-wrapper">
 
             <h3>calorie calculator</h3>
-            <form id="calculator__submit-search">
+            <form id="calculator__search-submit-form">
                 <label for="calculator__field">
                     <input type="text" name="calculator__field" id="calculator__field"
                            placeholder="Barcode / product">
                 </label>
+                <!--                <p id="no-input-warning"></p>-->
                 <button type="submit" id="calculator__search-button">search</button>
             </form>
 
             <div class="calculator__item-result-card">
-                <table id="calculator__item-table">
-                    <thead class="calculator__table">
-                    <tr>
+                <table id="calculator__search-table">
+                    <thead class="calculator__search-head">
+                    <tr class="calculator__label">
                         <th>product</th>
                         <th>quantity</th>
                         <th>label</th>
                     </tr>
                     </thead>
-                    <tbody class="calculator__table">
-                    <tr class="calculator__data" id="calculator__result-table">
-                        <!--     <td>Naam</td>
-                             <td>Weight</td>
-                             <td>gram</td>-->
+                    <tbody class="calculator__search-body">
+                    <tr class="calculator__data" id="calculator__search-data">
                     </tr>
                     </tbody>
                 </table>
             </div>
 
 
-            <form id="calculator__amount-submit">
-                <label for="calculator__amount-field">
+            <form id="calculator__amount-submit-form">
+                <label class="calculator__servings" for="calculator__amount-field">
                     <input type="text" name="calculator__amount-field" id="calculator__amount-field"
                            placeholder="Amount">
                 </label>
-                <label class="calculator__servings" for="calculator__servings-button">
-                    Serving(s)
+
+                <label for="calculator__servings-button">
                     <button type="submit" id="calculator__servings-button">+ Add</button>
                 </label>
             </form>
@@ -73,21 +71,21 @@
 
             <div class="calculator__amount-results">
                 <table id="calculator__amount-results-table">
-                    <thead>
-                    <tr class="calculator__label">
-                        <th>product</th>
+                    <thead class="calculator__amount-head">
+                    <tr class="amount__label">
+                        <th id="amount__product">product</th>
                         <th>calories</th>
                         <th>fat</th>
                         <th>carbs</th>
                     </tr>
                     </thead>
 
-                    <tbody id="#temp-amount-border">
-                    <tr class="calculator__data">
-                        <td id="amount__total">total</td>
-                        <td id="calculator__total-calories">kCal</td>
-                        <td id="calculator__total-fat">g</td>
-                        <td id="calculator__total-carbs">g</td>
+                    <tbody class="calculator__amount-body">
+                    <tr class="amount__data">
+                        <td id="amount__total">Total</td>
+                        <td id="calculator__total-calories"></td>
+                        <td id="calculator__total-fat"></td>
+                        <td id="calculator__total-carbs"></td>
                     </tr>
                     </tbody>
                 </table>

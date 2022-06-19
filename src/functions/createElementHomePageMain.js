@@ -22,7 +22,7 @@ const createElementSearch = (recipeArray) => {
                     <div class="recipe-result-card">
                         <p class="recipe-name">${recipe.recipe.label}</p>
                         <div class="recipe-info-text">
-                            <p class="recipe-calories-ingredients"><strong>${caloriesRound}</strong> calories | <strong>${recipe.recipe.ingredientLines.length}</strong> ingredients</p>
+                            <p class="recipe-calories-ingredients"><strong>${caloriesRound}</strong> Calories | <strong>${recipe.recipe.ingredientLines.length}</strong> Ingredients</p>
                             <p class="cooking-time"><img class="time-icon" src="${timeImage.src}" alt="Clock Icon"> <strong>${recipe.recipe.totalTime}</strong> min.</p>
                         </div>
                     </div>

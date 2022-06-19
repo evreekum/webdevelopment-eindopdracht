@@ -39,11 +39,8 @@ export const createRecipeName = (selectedRecipe) => {
 
                     Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in,
                     diam. Sed arcu. Cras consequat.
-
         </p>
-    
     `;
-    // console.log(createRecipeName);
 };
 
 export const createRecipeImage = (selectedRecipe) => {
@@ -52,9 +49,7 @@ export const createRecipeImage = (selectedRecipe) => {
 
     recipeImageCard.innerHTML = `
         <img class="recipe-image" src="${recipeImage}" alt="Recipe Image">
-    
     `;
-    // console.log(createRecipeImage);
 };
 
 export const createRecipeIngredientsList = (selectedRecipe) => {
@@ -65,10 +60,8 @@ export const createRecipeIngredientsList = (selectedRecipe) => {
 
         recipeIngredientsList.innerHTML += `
         <li>${ingredient}</li>
-    
-    `;
+        `;
     });
-    // console.log(createRecipeIngredientsList);
 };
 
 export const createRecipeNutrientsTable = (selectedRecipe) => {
@@ -106,10 +99,8 @@ export const createRecipeNutrientsTable = (selectedRecipe) => {
         <td>${naQuantity}</td>
         <td>${recipeNutrients.NA.unit}</td>
     </tr>
-           
     `;
 };
-
 
 export const createRecipeHealthLabels = (selectedRecipe) => {
     const recipeHealthLabels = selectedRecipe.healthLabels;
@@ -120,9 +111,6 @@ export const createRecipeHealthLabels = (selectedRecipe) => {
         recipeHealthLabelsCard.innerHTML = `
         <li class="health-background-shape">${healthLabel}</li>  
     
-    `;
+        `;
     });
-
 };
-
-

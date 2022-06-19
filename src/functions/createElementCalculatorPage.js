@@ -8,18 +8,19 @@ const createElementCalculator = (response) => {
     const carbs = Math.round(selectedProduct.nutrients.CHOCDF);
     const weight = productData.hints[0].measures[0].weight;
 
-    const calculatorProductList = document.getElementById("calculator__result-table");
-    calculatorProductList.replaceChildren();
+    const calculatorSearchData = document.getElementById("calculator__search-data");
+    calculatorSearchData.replaceChildren();
 
 
-    calculatorProductList.innerHTML += `
+    calculatorSearchData.innerHTML += `
             <td>${nameProduct}</td>
             <td>${Math.round(weight)}</td>
             <td>gram</td>
             `;
 
     const calculatorAmountField = document.getElementById("calculator__amount-field");
-    const submitCalculatorAmountForm = document.getElementById("calculator__amount-submit");
+
+    const submitCalculatorAmountForm = document.getElementById("calculator__amount-submit-form");
 
 
     submitCalculatorAmountForm.addEventListener("submit", (e) => {
@@ -46,7 +47,6 @@ const createElementCalculator = (response) => {
 
         //-------------Total Calories-------------//
         const caloriesData = document.getElementsByClassName("calculator__calories-data");
-        // let totalCaloriesTest = null;
         const caloriesArray = [];
 
 
@@ -63,7 +63,7 @@ const createElementCalculator = (response) => {
         );
 
         let totalCaloriesCell = document.getElementById("calculator__total-calories");
-        totalCaloriesCell.innerHTML = `${sumCalories} kCal`;
+        totalCaloriesCell.innerHTML = sumCalories;
 
         //---------------Total Fat------------------//
         const fatData = document.getElementsByClassName("calculator__fat-data");
@@ -82,7 +82,7 @@ const createElementCalculator = (response) => {
         );
 
         let totalFatCell = document.getElementById("calculator__total-fat")
-        totalFatCell.innerHTML = `${sumFat} g`;
+        totalFatCell.innerHTML = sumFat;
 
 
         //-------------Total Carbs------------------//
@@ -102,7 +102,7 @@ const createElementCalculator = (response) => {
         );
 
         let totalCarbsCell = document.getElementById("calculator__total-carbs")
-        totalCarbsCell.innerHTML = `${sumCarbs} g`;
+        totalCarbsCell.innerHTML = sumCarbs;
     });
 
 };

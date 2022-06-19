@@ -7,12 +7,14 @@
     2. Typography
     3. Layout
         3.1 Reusables
-        3.2 Other
     4. Areas
-        4.1 Header
-        4.2 Introduction
-        etc.
-    5. Media Queries
+        4.1 Navigation
+        4.2 Header
+        4.3 Main
+            4.3.1 Main - Home Page
+            4.3.2 Main - Recipe Page
+            4.3.3 Main - Calculator Page
+        4.4 Footer
 ////////////////////////*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
@@ -44,11 +46,12 @@ h1,
     color: var(--light-bg-font-color);
 }
 
-h2 {
+h2 a {
     font-family: "Austein", sans-serif;
     font-size: 30px;
     font-weight: lighter;
     color: var(--dark-bg-font-color);
+    text-decoration: none;
 }
 
 h3 {
@@ -56,8 +59,6 @@ h3 {
     font-size: 25px;
     font-weight: 700;
     word-spacing: 2px;
-    /*margin-top: 30px;*/
-    /*margin-bottom: 20px;*/
 }
 
 h3 p {
@@ -78,6 +79,16 @@ h5 {
     text-transform: capitalize;
 }
 
+.random-recipe-result-card p {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.random-recipe-info-text p {
+    font-size: 12px;
+    font-weight: 400;
+}
+
 li > p {
     font-size: 10px;
     font-weight: 300;
@@ -90,19 +101,13 @@ p,
     font-size: 14px;
 }
 
-/*p:first-letter {
-    text-transform:capitalize;
-}*/
-
-
 li {
     list-style-type: none;
-
 }
 
 li a {
     text-decoration: none;
-    text-transform: capitalize;
+    /*text-transform: capitalize;*/
 }
 
 .navigation-list li a {
@@ -117,6 +122,15 @@ li a {
     text-transform: capitalize;
 }
 
+#meal-type,
+#cuisine,
+#diet,
+#time,
+#search-field {
+    font-family: poppins, sans-serif;
+    font-size: 12px;
+}
+
 .recipe-name {
     font-size: 13px;
     font-weight: 600;
@@ -126,9 +140,14 @@ li a {
     font-size: 12px;
 }
 
- .time-icon {
-     padding-right: 10px;
- }
+.time-icon {
+    padding-right: 10px;
+}
+
+.nutrients__body td {
+    font-weight: 400;
+    font-size: 14px;
+}
 
 /* ------------------------------- 3. Layout --------------------------------------- */
 
@@ -158,6 +177,7 @@ li a {
 
 
 /*--------------------------------- 3.1 Temporary Border ----------------------------*/
+/*
 .outer-container {
     border: 1px solid red;
 }
@@ -177,8 +197,8 @@ h3 {
 
 .header__outer-container,
 .navigation__outer-container,
-.random-recipe-item,
-.search__form,
+.random-recipe-result-item,
+.search__request-submit,
 #main__recipes-list li {
     border: 2px solid orange;
 }
@@ -204,12 +224,13 @@ h3 {
 
 #calculator__submit-search,
 #calculator__amount-submit,
-#calculator__item-table,
-#calculator__amount-results-table,
-#temp-amount-border {
+#calculator__search-table,
+#calculator__amount-results-table {
     border: 2px solid darkslateblue;
 
 }
+*/
+
 
 /* --------------- 3.2 Reusables ----------------------- */
 
@@ -228,6 +249,7 @@ button,
     background-color: var(--button-color);
     border-style: none;
     border-radius: 4px;
+    box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.09), inset 0 0 8px 0 rgba(0, 0, 0, 0.11);
 }
 
 button::after,
@@ -237,9 +259,8 @@ button::after,
     padding-left: 20px;
 }
 
-/* --------------- 3.2 Other --------------------------- */
-
 /* ------------------------------- 4. Areas ---------------------------------------- */
+
 /*---------------- 4.1 Navigation --------------------- */
 .navigation__outer-container {
     background-color: var(--light-bg-font-color);
@@ -259,7 +280,6 @@ button::after,
     flex-basis: 50%;
 }
 
-
 .navigation-list {
     display: flex;
     flex-direction: row;
@@ -271,6 +291,10 @@ button::after,
     margin-right: var(--main-margin-left-right);
 }
 
+.navigation-list a {
+    text-transform: capitalize;
+}
+
 
 /* --------------- 4.2 Header ------------------------- */
 
@@ -279,7 +303,6 @@ button::after,
     background-size: cover;
     background-repeat: no-repeat;
     flex-basis: 450px;
-
 }
 
 .header__title-wrapper {
@@ -288,7 +311,6 @@ button::after,
     justify-content: center;
     align-items: flex-start;
     padding-top: 50px;
-
 }
 
 .header__button {
@@ -298,18 +320,82 @@ button::after,
 
 .header-text {
     margin-left: var(--main-margin-left-right);
-
 }
 
+.header__recipes-wrapper {
+    width: var(--inner-container-width);
+    height: 300px;
+    margin-top: -60px;
+}
 
 .header__random-recipe-card {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
-#header__random-recipes-list {
+.random-recipe-result-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 0;
+    padding: 10px;
+    height: 70px;
+    color: #3E3E3E;
+    border-top: 2px solid #595959;
+}
 
+.random-recipe-result-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    border-radius: 4px;
+    width: 312px;
+    min-height: 220px;
+    margin-bottom: 30px;
+    break-inside: avoid-column;
+    background-color: var(--light-bg-font-color);
+    box-shadow: 0 2px 12px 4px rgba(0, 0, 0, 0.28);
+    font-size: 12px;
+}
+
+.random-recipe-result-img {
+    box-shadow: inset 0 -6px 14px -6px rgba(0, 0, 0, 0.76);
+}
+
+.random-recipe-result-item:nth-of-type(2) {
+    z-index: 10;
+    width: 340px;
+}
+
+.random-recipe-result-item:nth-of-type(2):hover {
+    z-index: 20;
+    width: 342px;
+    height: 230px;
+    position: absolute;
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+
+.random-recipe-result-item:nth-of-type(1),
+.random-recipe-result-item:nth-of-type(3) {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.random-recipe-result-item:nth-of-type(1):hover,
+.random-recipe-result-item:nth-of-type(3):hover {
+    z-index: 8;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#header__random-recipe-list {
+    width: 100%;
+    column-count: 3;
+    margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .random-recipe-item {
@@ -330,10 +416,9 @@ button::after,
     width: 100%;
     height: 90px;
     background-color: var(--dark-bg-font-color);
-
 }
 
-.search__form {
+.search__request-submit {
     display: flex;
     justify-content: space-between;
     flex-basis: var(--inner-container-width);
@@ -348,35 +433,29 @@ button::after,
     height: 32px;
     text-align: start;
     padding-left: 15px;
-    font-family: poppins, sans-serif;
-    font-size: 12px;
     border-radius: 4px;
     border-style: none;
     color: var(--main-font-color);
-
 }
 
 #search-field {
     width: 200px;
 }
 
-#main__recipes-results-list,
-#header__random-recipe-list {
+#main__recipes-results-list {
     width: 100%;
     column-count: 3;
     gap: 30px;
     margin-top: 30px;
     margin-bottom: 50px;
-    /*overflow: visible;*/
 }
 
-.recipe-result-item,
-.random-recipe-result-item {
+.recipe-result-item {
     display: flex;
     flex-direction: column;
     list-style-type: none;
     border-radius: 4px;
-    min-width: calc(100% * (1/3));
+    min-width: calc(100% * (1 / 3));
     min-height: 220px;
     margin-bottom: 30px;
     break-inside: avoid-column;
@@ -385,7 +464,7 @@ button::after,
 }
 
 .recipe-result-img,
-.random-recipe-result-img{
+.random-recipe-result-img {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -400,9 +479,7 @@ button::after,
     z-index: 1;
 }
 
-.recipe-result-card,
-.random-recipe-result-card{
-    /*background-color: var(--light-bg-font-color);*/
+.recipe-result-card {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -420,7 +497,6 @@ button::after,
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 15px;
     gap: 3px;
 }
 
@@ -436,7 +512,6 @@ button::after,
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-
 }
 
 .recipe-page-card {
@@ -470,9 +545,7 @@ button::after,
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    width: calc(100% * (1/3) - 0px - 0px);
-   /* max-height: 300px;*/
-    /*overflow: hidden;*/
+    width: calc(100% * (1 / 3) - 0px - 0px);
 }
 
 .recipe-image {
@@ -483,13 +556,7 @@ button::after,
 }
 
 #recipe-ingredients-card {
-    width: calc(100% * (1/2) - 150px - 0px);
-
-    /*line-height: 20px;*/
-    /*height: max-content;*/
-    /*height: 280px;*/
-
-    /*padding: 10px 10px 10px 30px;*/
+    width: calc(100% * (1 / 2) - 150px - 0px);
 }
 
 #ingredients-list li {
@@ -500,35 +567,29 @@ button::after,
 }
 
 #recipe-nutrients-card {
-    width: calc(100% * (1/2) - 0px - 130px);
+    width: calc(100% * (1 / 2) - 0px - 130px);
 }
 
-table {
+.nutrients__results-table {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
 }
 
-tr th {
-    font-weight: 500;
-}
-
-tr td {
-    font-weight: 400;
-    font-size: 14px;
+.nutrients__body td {
     padding-bottom: 2px;
+    text-align: right;
+    padding-left: 30px;
 }
 
-td {
-    padding-left: 50px;
-}
-
-thead {
+.nutrients__head {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     font-size: 14px;
+}
+
+.nutrients__head th {
+    font-weight: 500;
 }
 
 #recipe-health-card {
@@ -565,35 +626,11 @@ thead {
 
 
 /*---------------- 4.2.3 Main - Calculator Page ------- */
-/*.calculator__inner-container {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    align-items: flex-start;*/
-/*    padding-top: 30px;*/
-/*}*/
-
-.calculator__inner-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    align-self: center;
-    padding-top: 30px;
-    flex-wrap: wrap;
-}
-
-.calculator__label {
-    width: 100%;
-    border: 1px solid darkolivegreen;
-}
-
 .calculator__search-wrapper {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content:;*/
-    /*align-items: ;*/
-    width: 50%;
-    height: 500px;
+    width: calc(100% * (1 / 2) - 0px - 0px);
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 200px;
 }
 
 #calculator__field,
@@ -606,7 +643,7 @@ thead {
     font-size: 12px;
     border-radius: 4px;
     color: var(--main-font-color);
-    border: 1px solid var(--dark-bg-font-color);
+    border: 1px solid #808080;
 }
 
 #calculator__search-button,
@@ -614,9 +651,16 @@ thead {
     border: 1px solid var(--dark-bg-font-color);
 }
 
+#calculator__search-submit-form,
+#calculator__amount-submit-form {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 100px 10px 2px;
+}
+
 #calculator__amount-field {
     width: 100px;
-    margin-right: 45px;
+    margin-right: 20px;
 }
 
 #calculator__servings-button {
@@ -632,40 +676,75 @@ thead {
     padding-left: 0;
 }
 
-.calculator__servings {
+.calculator__servings::after {
+    content: "Serving(s)";
+    display: inline-block;
     font-size: 12px;
 }
 
-.calculator__amount-results {
-    border-collapse: collapse;
+#calculator__amount-results-table,
+#calculator__search-table {
+    width: 100%;
+    font-size: 14px;
 }
 
-#calculator__amount-results-table,
-#calculator__result-table,
-#calculator__item-table {
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: flex-start;*/
-    /*align-items: flex-start;*/
+.amount__label th,
+.calculator__label th {
+    text-transform: capitalize;
+}
 
+.amount__label th,
+.amount__data td {
+    text-align: right;
+    width: calc(100% * (1 / 4) - 0px - 0px);
+}
+
+.calculator__label th,
+.calculator__data td {
+    text-align: right;
+}
+
+#calculator__search-table {
+    width: 80%;
+}
+
+.calculator__label th:first-child,
+.calculator__data td:first-child {
+    text-align: left;
 }
 
 #amount__total,
-#calculator__total-calories,
-#calculator__total-fat,
-#calculator__total-carbs {
-    padding-left: 0px;
+#amount__product {
+    text-align: left;
 }
 
-/*.calculator__table {*/
-/*    border: 1px solid deeppink;*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    justify-content: space-evenly;*/
-/*    align-items: flex-start;*/
-/*    !*flex-wrap: nowrap;*!*/
-/*    !*justify-content: ;*!*/
-/*}*/
+.calculator__fat-data::after,
+.calculator__carbs-data::after,
+#calculator__total-fat::after,
+#calculator__total-carbs::after {
+    content: " g";
+    display: inline;
+    font-size: 12px;
+}
+
+.calculator__calories-data::after,
+#calculator__total-calories::after {
+    content: " kCal";
+    display: inline;
+    font-size: 12px;
+}
+
+.calculator__amount-results table {
+    border-collapse: collapse;
+}
+
+.calculator__amount-body td {
+    border-top: 1px solid var(--main-font-color);
+}
+
+.calculator__data td {
+    border: transparent;
+}
 
 /* --------------- 4.4 Footer ------------------------- */
 .footer__wrapper {
@@ -709,7 +788,6 @@ thead {
     align-items: center;
 }
 
-
 img {
     height: 10px;
     color: var(--button-color);
@@ -718,8 +796,6 @@ img {
 .footer__icon-card {
     padding-top: 5px;
 }
-
-/* ------------------------------- 5. Media Queries -------------------------------- */
 
 
 
