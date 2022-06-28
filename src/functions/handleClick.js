@@ -1,5 +1,6 @@
 import fetchData from "./fetchDataHomeSearch";
 
+
 const searchRequestSubmit = () => {
 
     const searchFieldIngredients = document.getElementById("search-field");
@@ -32,7 +33,5 @@ const searchRequestSubmit = () => {
             fetchData(ingredients, mealType, cuisine, diet, time);
         }
     });
-
 };
-
 export default searchRequestSubmit;

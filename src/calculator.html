@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="./assets/fonts/fonts.css">
     <title>Calorie Calculator</title>
 </head>
-
 
 <body class="body__outer-container">
 
@@ -23,11 +23,12 @@
         </nav>
     </div>
 
-
 </header>
 
+
 <main class="outer-container">
-    <div class="calculator__inner-container inner-container">
+
+    <div class="inner-container">
         <div class="calculator__search-wrapper">
 
             <h3>calorie calculator</h3>
@@ -40,22 +41,22 @@
                 <button type="submit" id="calculator__search-button">search</button>
             </form>
 
-            <div class="calculator__item-result-card">
+            <div>
                 <table id="calculator__search-table">
-                    <thead class="calculator__search-head">
+                    <thead>
                     <tr class="calculator__label">
                         <th>product</th>
                         <th>quantity</th>
                         <th>label</th>
                     </tr>
                     </thead>
-                    <tbody class="calculator__search-body">
+
+                    <tbody>
                     <tr class="calculator__data" id="calculator__search-data">
                     </tr>
                     </tbody>
                 </table>
             </div>
-
 
             <form id="calculator__amount-submit-form">
                 <label class="calculator__servings" for="calculator__amount-field">
@@ -67,7 +68,6 @@
                     <button type="submit" id="calculator__servings-button">+ Add</button>
                 </label>
             </form>
-            <!--                <div class="calculator__amount-servings-wrapper"> </div>-->
 
             <div class="calculator__amount-results">
                 <table id="calculator__amount-results-table">
@@ -96,6 +96,7 @@
 
 </main>
 
+
 <footer class="footer__outer-container outer-container">
 
     <div class="footer__wrapper inner-container">
@@ -121,7 +122,7 @@
                 <p>+31648769524</p>
             </li>
 
-            <li class="footer__social-wrapper">
+            <li>
                 <h5>Social</h5>
                 <div class="footer__icon-card">
                     <a href="#">
@@ -149,7 +150,6 @@
                         </div>
                     </a>
                 </div>
-
             </li>
         </ul>
     </div>
@@ -158,6 +158,5 @@
 
 
 <script type="module" src="mainCalculator.js"></script>
-
 </body>
 </html>

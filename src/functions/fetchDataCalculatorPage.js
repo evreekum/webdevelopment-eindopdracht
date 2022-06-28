@@ -23,7 +23,4 @@ const fetchDataCalculator = async (ingredient) => {
     }
 
 };
-
-export default fetchDataCalculator
-
-
+export default fetchDataCalculator;

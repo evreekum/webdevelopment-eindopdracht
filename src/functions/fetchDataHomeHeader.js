@@ -3,6 +3,7 @@ import createElementRandomRecipe from "./createElementHomePageHeader";
 
 
 const fetchDataHomeHeader = async (searchQuery) => {
+
     const URI = "https://api.edamam.com";
     const endpoint = "/api/recipes/v2";
 
@@ -23,5 +24,4 @@ const fetchDataHomeHeader = async (searchQuery) => {
         console.error(err);
     }
 };
-
 export default fetchDataHomeHeader;

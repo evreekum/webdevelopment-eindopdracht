@@ -110,7 +110,6 @@ export const createRecipeHealthLabels = (selectedRecipe) => {
 
         recipeHealthLabelsCard.innerHTML = `
         <li class="health-background-shape">${healthLabel}</li>  
-    
         `;
     });
 };

@@ -1,4 +1,4 @@
-//Create element recipe search
+
 const createElementSearch = (recipeArray) => {
 
     const recipeList = document.getElementById("main__recipes-results-list");
@@ -23,7 +23,7 @@ const createElementSearch = (recipeArray) => {
                         <p class="recipe-name">${recipe.recipe.label}</p>
                         <div class="recipe-info-text">
                             <p class="recipe-calories-ingredients"><strong>${caloriesRound}</strong> Calories | <strong>${recipe.recipe.ingredientLines.length}</strong> Ingredients</p>
-                            <p class="cooking-time"><img class="time-icon" src="${timeImage.src}" alt="Clock Icon"> <strong>${recipe.recipe.totalTime}</strong> min.</p>
+                            <p><img class="time-icon" src="${timeImage.src}" alt="Clock Icon"> <strong>${recipe.recipe.totalTime}</strong> min.</p>
                         </div>
                     </div>
                 </a>
@@ -32,5 +32,4 @@ const createElementSearch = (recipeArray) => {
     })
 };
 
-
-export default createElementSearch
+export default createElementSearch;

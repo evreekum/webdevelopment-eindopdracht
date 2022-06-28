@@ -5,4 +5,4 @@ import searchRequestSubmit from "./functions/handleClick";
 import fetchDataHomeHeader from "./functions/fetchDataHomeHeader";
 
 searchRequestSubmit();
-fetchDataHomeHeader("curry");
+fetchDataHomeHeader("salad");

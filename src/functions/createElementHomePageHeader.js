@@ -12,14 +12,14 @@ const createElementRandomRecipe = (recipeArray) => {
 
         recipeRandomList.innerHTML += `
             <li class="random-recipe-result-item">
-                <a id="random-next-page" href="/recipe-page.html?id=${id}" target="_blank">
+                <a href="/recipe-page.html?id=${id}" target="_blank">
                     <img class="random-recipe-result-img"
                            src="${recipe.recipe.images.REGULAR.url}" alt="Meal Image"/>              
                     <div class="random-recipe-result-card">
-                        <p class="random-recipe-name">${recipe.recipe.label}</p>
+                        <p>${recipe.recipe.label}</p>
                         <div class="random-recipe-info-text">
-                            <p class="random-recipe-calories-ingredients"><strong>${caloriesRound}</strong> Calories | <strong>${recipe.recipe.ingredientLines.length}</strong> Ingredients</p>
-                            <p class="cooking-time"><img class="time-icon" src="${timeImage.src}" alt="Clock Icon"> <strong>${recipe.recipe.totalTime}</strong> min.</p>
+                            <p><strong>${caloriesRound}</strong> Calories | <strong>${recipe.recipe.ingredientLines.length}</strong> Ingredients</p>
+                            <p><img class="time-icon" src="${timeImage.src}" alt="Clock Icon"> <strong>${recipe.recipe.totalTime}</strong> min.</p>
                         </div>
                     </div>
                 </a>
@@ -27,5 +27,4 @@ const createElementRandomRecipe = (recipeArray) => {
         `
     });
 };
-
 export default createElementRandomRecipe;

@@ -5,12 +5,14 @@ import {
     createRecipePageTabTitle
 } from "./createElementRecipePage";
 
+
 document.addEventListener("DOMContentLoaded", (event) => {
     const parameters = new URLSearchParams(window.location.search);
     const id = parameters.get("id");
     event.preventDefault();
 
     const fetchDataRecipe = async () => {
+
         try {
             const URI = "https://api.edamam.com";
             const endpoint = "/api/recipes/v2/";
@@ -36,4 +38,3 @@ document.addEventListener("DOMContentLoaded", (event) => {
     };
     fetchDataRecipe();
 });
-

@@ -11,7 +11,6 @@ const createElementCalculator = (response) => {
     const calculatorSearchData = document.getElementById("calculator__search-data");
     calculatorSearchData.replaceChildren();
 
-
     calculatorSearchData.innerHTML += `
             <td>${nameProduct}</td>
             <td>${Math.round(weight)}</td>
@@ -19,12 +18,11 @@ const createElementCalculator = (response) => {
             `;
 
     const calculatorAmountField = document.getElementById("calculator__amount-field");
-
     const submitCalculatorAmountForm = document.getElementById("calculator__amount-submit-form");
 
+    submitCalculatorAmountForm.addEventListener("submit", (event) => {
+        event.preventDefault();
 
-    submitCalculatorAmountForm.addEventListener("submit", (e) => {
-        e.preventDefault();
         const totalCalories = Math.round(calculatorAmountField.value * calories * 100) / 100;
         const totalFat = Math.round(calculatorAmountField.value * fat * 100) / 100;
         const totalCarbs = Math.round(calculatorAmountField.value * carbs * 100) / 100;
@@ -44,11 +42,9 @@ const createElementCalculator = (response) => {
         cellForCarbs.innerHTML = totalCarbs;
         cellForCarbs.className = "calculator__carbs-data";
 
-
         //-------------Total Calories-------------//
         const caloriesData = document.getElementsByClassName("calculator__calories-data");
         const caloriesArray = [];
-
 
         for (let i = 0; i < caloriesData.length; i++) {
             caloriesArray.push(caloriesData[i].innerText);
@@ -57,7 +53,7 @@ const createElementCalculator = (response) => {
             return Number(str);
         });
 
-        const initialCaloriesAmount = 0;
+        let initialCaloriesAmount = null;
         const sumCalories = caloriesArrayInteger.reduce(
             (previousAmount, currentAmount) => previousAmount + currentAmount, initialCaloriesAmount
         );
@@ -76,14 +72,13 @@ const createElementCalculator = (response) => {
             return Number(str);
         });
 
-        const initialFatAmount = 0;
+        let initialFatAmount = null;
         const sumFat = fatArrayInteger.reduce(
             (previousAmount, currentAmount) => previousAmount + currentAmount, initialFatAmount
         );
 
         let totalFatCell = document.getElementById("calculator__total-fat")
         totalFatCell.innerHTML = sumFat;
-
 
         //-------------Total Carbs------------------//
         const carbsData = document.getElementsByClassName("calculator__carbs-data");
@@ -96,7 +91,7 @@ const createElementCalculator = (response) => {
             return Number(str);
         });
 
-        const initialCarbsAmount = 0;
+        let initialCarbsAmount = null;
         const sumCarbs = carbsArrayInteger.reduce(
             (previousAmount, currentAmount) => previousAmount + currentAmount, initialCarbsAmount
         );
@@ -104,8 +99,6 @@ const createElementCalculator = (response) => {
         let totalCarbsCell = document.getElementById("calculator__total-carbs")
         totalCarbsCell.innerHTML = sumCarbs;
     });
-
 };
 
-export default createElementCalculator
-
+export default createElementCalculator;

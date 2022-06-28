@@ -1,6 +1,7 @@
 import axios from "axios";
 import createElementSearch from "./createElementHomePageMain";
 
+
 const fetchData = async (ingredients, mealType, cuisine, diet, time) => {
 
     const URI = "https://api.edamam.com";
@@ -27,5 +28,4 @@ const fetchData = async (ingredients, mealType, cuisine, diet, time) => {
         console.error(err);
     }
 };
-
 export default fetchData;

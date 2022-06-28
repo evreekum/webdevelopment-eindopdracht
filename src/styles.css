@@ -17,6 +17,7 @@
         4.4 Footer
 ////////////////////////*/
 
+
 /* ------------------------------- 1. Global Styles -------------------------------- */
 * {
     box-sizing: border-box;
@@ -176,63 +177,7 @@ li a {
 }
 
 
-/*--------------------------------- 3.1 Temporary Border ----------------------------*/
-/*
-.outer-container {
-    border: 1px solid red;
-}
-
-.inner-container {
-    border: 1px solid green;
-}
-
-h1,
-.main__subtitle,
-h2,
-.navigation-list,
-.footer-list,
-h3 {
-    border: 1px solid dodgerblue;
-}
-
-.header__outer-container,
-.navigation__outer-container,
-.random-recipe-result-item,
-.search__request-submit,
-#main__recipes-list li {
-    border: 2px solid orange;
-}
-
-#main__recipes-results-list {
-    border: 1px solid deeppink;
-}
-
-.recipe-result-img {
-    border: 1px solid blueviolet;
-}
-
-.recipe {
-    border: 2px solid black;
-}
-
-#main__recipe-page-wrapper div,
-#main__recipe-page-wrapper span,
-.calculator__search-wrapper {
-    border: 2px solid brown;
-}
-
-
-#calculator__submit-search,
-#calculator__amount-submit,
-#calculator__search-table,
-#calculator__amount-results-table {
-    border: 2px solid darkslateblue;
-
-}
-*/
-
-
-/* --------------- 3.2 Reusables ----------------------- */
+/* ------------------------------- 3.1 Reusables ------------------------------------- */
 
 button,
 .header__button {
@@ -552,7 +497,7 @@ button::after,
     height: inherit;
     max-height: 280px;
     object-fit: cover;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
 #recipe-ingredients-card {
@@ -796,8 +741,3 @@ img {
 .footer__icon-card {
     padding-top: 5px;
 }
-
-
-
-
-
